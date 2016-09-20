@@ -13,15 +13,36 @@ class NavigationPrimary extends Component {
 	render () {
 
 		return (
-			<nav className='navbar navbar-default' role='navigation' aria-labelledby='Primary site navigation'>
-				<div className='container-fluid'>
-					<div className='navbar-header'>
-						<Link className='navbar-brand' to='/'>Logo image</Link>
+			<nav
+				className 		= 'navbar navbar-default'
+				role 			= 'navigation'
+				aria-labelledby = 'Primary site navigation'>
+				<div className 	= 'container-fluid'>
+					<div className 		= 'navbar-header'>
+						<Link
+							className 	= 'navbar-brand'
+							to 			= '/'>
+							Logo image
+						</Link>
 					</div>
-					<div className='collapse navbar-collapse' id='bs-example-navbar-collapse-1'>
-						<ul className='nav navbar-nav'>
-                            <li><Link activeClassName='active' to='/'>Home</Link></li>
-                            <li><Link activeClassName='active' to='/section'>Section</Link></li>
+					<div
+						className 	= 'collapse navbar-collapse'
+						id 			= 'bs-example-navbar-collapse-1'>
+						<ul className 	= 'nav navbar-nav'>
+                            <li>
+                            	<Link
+                            		activeClassName = 'active'
+                            		to 				= '/'>
+                            		Home
+                            	</Link>
+                            </li>
+                            <li>
+                            	<Link
+                            		activeClassName = 'active'
+                            		to 				= '/section'>
+                            		Section
+                            	</Link>
+                            </li>
 						</ul>
 					</div>
 				</div>

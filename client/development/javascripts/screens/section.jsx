@@ -14,9 +14,9 @@ class Section extends Component {
 	render () {
 
 		return (
-			<div>
+			<section>
 				<h1>Section</h1>
-				<div className='list-group'>
+				<div className = 'list-group'>
 
 					<Link
 						to 			= { '/section/sub-section' }
@@ -24,7 +24,7 @@ class Section extends Component {
 						Sub section
 					</Link>
 				</div>
-			</div>
+			</section>
 		);
 	}
 };

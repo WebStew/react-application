@@ -14,7 +14,7 @@ class SubSection extends Component {
 	render () {
 
 		return (
-			<div>
+			<section>
 				<h1>Sub Section</h1>
 
 				<Link
@@ -22,7 +22,7 @@ class SubSection extends Component {
 					to 			= '/section'>
 					Go back to section
 				</Link>
-			</div>
+			</section>
 		);
 	}
 };

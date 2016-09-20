@@ -14,7 +14,11 @@ class ListItem extends Component {
 	render () {
 
 		return (
-			<li data-id={ this.props.id }>{ this.props.value }</li>
+			<li
+				className 	= { this.props.className 	}
+				data-id 	= { this.props.id 			}>
+				{ this.props.value }
+			</li>
 		);
 	}
 };

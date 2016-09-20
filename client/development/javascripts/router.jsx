@@ -19,12 +19,22 @@ const store = setStore ();
 
 render (
 
-	<Provider store={store}>
-		<Router history={browserHistory}>
-			<Route path="/" component={MainView}>
-				<IndexRoute 				component={HomeView}		/>
-				<Route path='/section' 		component={SectionView}		/>
-				<Route path='/section/:id' 	component={SubSectionView} 	/>
+	<Provider 	store 	= { store }>
+		<Router history = { browserHistory }>
+			<Route
+				path 		= '/'
+				component 	= { MainView }>
+				<IndexRoute
+					component 	= { HomeView }
+				/>
+				<Route
+					path 		= '/section'
+					component 	= { SectionView }
+				/>
+				<Route
+					path 		= '/section/:id'
+					component 	= { SubSectionView 	}
+				/>
 			</Route>
 		</Router>
 	</Provider> ,

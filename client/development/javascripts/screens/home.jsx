@@ -16,13 +16,13 @@ class Home extends Component {
 	render () {
 
 		return (
-			<div>
+			<section>
 				<h1>Home page</h1>
 				<p>Including the stopwatch component</p>
 
 				<Timer interval='1' />
 				<LapTimes 			/>
-			</div>
+			</section>
 		);
 	}
 };

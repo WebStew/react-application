@@ -118,28 +118,32 @@ class Timer extends Component {
 						type 		= 'button'
 						value 		= 'Start'
 						disabled 	= { timer.on }
-						onClick 	= { this.start } />
+						onClick 	= { this.start }
+					/>
 
 					<Button
 						className 	= 'btn btn-info'
 						type 		= 'button'
 						disabled 	= { timer.off }
 						value 		= 'Laptime'
-						onClick 	= { this.save } />
+						onClick 	= { this.save }
+					/>
 
 					<Button
 						className 	= 'btn btn-warning'
 						type 		= 'button'
 						value 		= 'Stop'
 						disabled 	= { timer.off }
-						onClick 	= { this.stop } />
+						onClick 	= { this.stop }
+					/>
 
 					<Button
 						className 	= 'btn btn-danger'
 						type 		= 'button'
 						disabled 	= { timer.on || timer.value === 0 }
 						value 		= 'Reset'
-						onClick 	= { this.reset } />
+						onClick 	= { this.reset }
+					/>
 				</div>
 			</section>
 		);

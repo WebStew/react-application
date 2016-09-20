@@ -15,9 +15,11 @@ class Main extends Component {
 		return (
 			<div>
 				<NavigationPrimary />
-				<div className='container'>
+				<main
+					className 	= 'container'
+					role 		= 'main'>
 					{ this.props.children }
-				</div>
+				</main>
 			</div>
 		);
 	}

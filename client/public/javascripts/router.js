@@ -67,15 +67,15 @@
 	
 	var _home2 = _interopRequireDefault(_home);
 	
-	var _section = __webpack_require__(/*! ./screens/section.jsx */ 269);
+	var _section = __webpack_require__(/*! ./screens/section.jsx */ 267);
 	
 	var _section2 = _interopRequireDefault(_section);
 	
-	var _subSection = __webpack_require__(/*! ./screens/sub-section.jsx */ 270);
+	var _subSection = __webpack_require__(/*! ./screens/sub-section.jsx */ 268);
 	
 	var _subSection2 = _interopRequireDefault(_subSection);
 	
-	var _application = __webpack_require__(/*! ./stores/application.jsx */ 263);
+	var _application = __webpack_require__(/*! ./stores/application.jsx */ 269);
 	
 	var _application2 = _interopRequireDefault(_application);
 	
@@ -91,10 +91,20 @@
 			{ history: _reactRouter.browserHistory },
 			_react2.default.createElement(
 				_reactRouter.Route,
-				{ path: '/', component: _main2.default },
-				_react2.default.createElement(_reactRouter.IndexRoute, { component: _home2.default }),
-				_react2.default.createElement(_reactRouter.Route, { path: '/section', component: _section2.default }),
-				_react2.default.createElement(_reactRouter.Route, { path: '/section/:id', component: _subSection2.default })
+				{
+					path: '/',
+					component: _main2.default },
+				_react2.default.createElement(_reactRouter.IndexRoute, {
+					component: _home2.default
+				}),
+				_react2.default.createElement(_reactRouter.Route, {
+					path: '/section',
+					component: _section2.default
+				}),
+				_react2.default.createElement(_reactRouter.Route, {
+					path: '/section/:id',
+					component: _subSection2.default
+				})
 			)
 		)
 	), document.getElementById('view-application'));
@@ -29402,8 +29412,6 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _reactRouter = __webpack_require__(/*! react-router */ 196);
-	
 	var _navigationPrimary = __webpack_require__(/*! ../components/container/navigation-primary.jsx */ 258);
 	
 	var _navigationPrimary2 = _interopRequireDefault(_navigationPrimary);
@@ -29442,8 +29450,10 @@
 					null,
 					_react2.default.createElement(_navigationPrimary2.default, null),
 					_react2.default.createElement(
-						'div',
-						{ className: 'container' },
+						'main',
+						{
+							className: 'container',
+							role: 'main' },
 						this.props.children
 					)
 				);
@@ -29509,7 +29519,10 @@
 	
 				return _react2.default.createElement(
 					'nav',
-					{ className: 'navbar navbar-default', role: 'navigation', 'aria-labelledby': 'Primary site navigation' },
+					{
+						className: 'navbar navbar-default',
+						role: 'navigation',
+						'aria-labelledby': 'Primary site navigation' },
 					_react2.default.createElement(
 						'div',
 						{ className: 'container-fluid' },
@@ -29518,13 +29531,17 @@
 							{ className: 'navbar-header' },
 							_react2.default.createElement(
 								_reactRouter.Link,
-								{ className: 'navbar-brand', to: '/' },
+								{
+									className: 'navbar-brand',
+									to: '/' },
 								'Logo image'
 							)
 						),
 						_react2.default.createElement(
 							'div',
-							{ className: 'collapse navbar-collapse', id: 'bs-example-navbar-collapse-1' },
+							{
+								className: 'collapse navbar-collapse',
+								id: 'bs-example-navbar-collapse-1' },
 							_react2.default.createElement(
 								'ul',
 								{ className: 'nav navbar-nav' },
@@ -29533,7 +29550,9 @@
 									null,
 									_react2.default.createElement(
 										_reactRouter.Link,
-										{ activeClassName: 'active', to: '/' },
+										{
+											activeClassName: 'active',
+											to: '/' },
 										'Home'
 									)
 								),
@@ -29542,7 +29561,9 @@
 									null,
 									_react2.default.createElement(
 										_reactRouter.Link,
-										{ activeClassName: 'active', to: '/section' },
+										{
+											activeClassName: 'active',
+											to: '/section' },
 										'Section'
 									)
 								)
@@ -29585,7 +29606,7 @@
 	
 	var _timer2 = _interopRequireDefault(_timer);
 	
-	var _lapTimes = __webpack_require__(/*! ../components/container/lap-times.jsx */ 267);
+	var _lapTimes = __webpack_require__(/*! ../components/container/lap-times.jsx */ 264);
 	
 	var _lapTimes2 = _interopRequireDefault(_lapTimes);
 	
@@ -29620,7 +29641,7 @@
 			value: function render() {
 	
 				return _react2.default.createElement(
-					'div',
+					'section',
 					null,
 					_react2.default.createElement(
 						'h1',
@@ -29827,25 +29848,29 @@
 							type: 'button',
 							value: 'Start',
 							disabled: timer.on,
-							onClick: this.start }),
+							onClick: this.start
+						}),
 						_react2.default.createElement(_button2.default, {
 							className: 'btn btn-info',
 							type: 'button',
 							disabled: timer.off,
 							value: 'Laptime',
-							onClick: this.save }),
+							onClick: this.save
+						}),
 						_react2.default.createElement(_button2.default, {
 							className: 'btn btn-warning',
 							type: 'button',
 							value: 'Stop',
 							disabled: timer.off,
-							onClick: this.stop }),
+							onClick: this.stop
+						}),
 						_react2.default.createElement(_button2.default, {
 							className: 'btn btn-danger',
 							type: 'button',
 							disabled: timer.on || timer.value === 0,
 							value: 'Reset',
-							onClick: this.reset })
+							onClick: this.reset
+						})
 					)
 				);
 			}
@@ -29950,11 +29975,7 @@
 		value: true
 	});
 	
-	var _application = __webpack_require__(/*! ../stores/application.jsx */ 263);
-	
-	var _application2 = _interopRequireDefault(_application);
-	
-	var _timer = __webpack_require__(/*! ../constants/timer.jsx */ 266);
+	var _timer = __webpack_require__(/*! ../constants/timer.jsx */ 263);
 	
 	var _timer2 = _interopRequireDefault(_timer);
 	
@@ -30023,6 +30044,484 @@
 
 /***/ },
 /* 263 */
+/*!*****************************************************!*\
+  !*** ./development/javascripts/constants/timer.jsx ***!
+  \*****************************************************/
+/***/ function(module, exports) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+		value: true
+	});
+	
+	/**
+	 * Constannts across the timer component.
+	 * @type {Object}
+	 */
+	
+	exports.default = {
+		off: 'timer:off',
+		on: 'timer:on',
+		reset: 'timer:reset',
+		save: 'timer:save',
+		set: 'timer:set'
+	};
+
+/***/ },
+/* 264 */
+/*!********************************************************************!*\
+  !*** ./development/javascripts/components/container/lap-times.jsx ***!
+  \********************************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+		value: true
+	});
+	
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+	
+	var _react = __webpack_require__(/*! react */ 1);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	var _reactDom = __webpack_require__(/*! react-dom */ 34);
+	
+	var _reactRedux = __webpack_require__(/*! react-redux */ 172);
+	
+	var _button = __webpack_require__(/*! ../presentational/button.jsx */ 261);
+	
+	var _button2 = _interopRequireDefault(_button);
+	
+	var _list = __webpack_require__(/*! ../presentational/list.jsx */ 265);
+	
+	var _list2 = _interopRequireDefault(_list);
+	
+	var _listItem = __webpack_require__(/*! ../presentational/list-item.jsx */ 266);
+	
+	var _listItem2 = _interopRequireDefault(_listItem);
+	
+	var _timerView = __webpack_require__(/*! ../../actions/timer-view.jsx */ 262);
+	
+	var _timerView2 = _interopRequireDefault(_timerView);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+	
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+	
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	
+	/**
+	 * Timer results React component which displays a list of
+	 * timestamps from the timer store.
+	 */
+	var LapTimes = function (_Component) {
+		_inherits(LapTimes, _Component);
+	
+		function LapTimes() {
+			_classCallCheck(this, LapTimes);
+	
+			var _this = _possibleConstructorReturn(this, (LapTimes.__proto__ || Object.getPrototypeOf(LapTimes)).call(this));
+	
+			_this.reset = _this.reset.bind(_this);
+			return _this;
+		}
+	
+		/**
+	  * Deletes all the timestamps.
+	  */
+	
+	
+		_createClass(LapTimes, [{
+			key: 'reset',
+			value: function reset() {
+				var dispatch = this.props.dispatch;
+	
+	
+				dispatch(_timerView2.default.reset());
+			}
+	
+			/**
+	   * Renders all the timestamps from the timestamp store or no results if it is empty.
+	   * @return {Object} Section element.
+	   */
+	
+		}, {
+			key: 'render',
+			value: function render() {
+	
+				var timestamps = this.props.timer.timestamps;
+	
+				// There are no timestamps don't render the component
+				// if ( Object.keys ( timestamps ).length === 0 ) {
+				// 	return null;
+				// }
+	
+				return _react2.default.createElement(
+					'section',
+					null,
+					_react2.default.createElement(
+						'h2',
+						null,
+						'Lap times'
+					),
+					_react2.default.createElement(_list2.default, {
+						items: timestamps,
+						description: 'Lap times'
+					}),
+					_react2.default.createElement(_button2.default, {
+						className: 'btn btn-danger',
+						type: 'button',
+						disabled: Object.keys(timestamps).length === 0,
+						value: 'Reset',
+						onClick: this.reset
+					})
+				);
+			}
+		}]);
+	
+		return LapTimes;
+	}(_react.Component);
+	
+	;
+	
+	/**
+	 * Connect this component to the timer store.
+	 */
+	exports.default = (0, _reactRedux.connect)(function (state) {
+		return {
+			timer: state.timer
+		};
+	})(LapTimes);
+
+/***/ },
+/* 265 */
+/*!********************************************************************!*\
+  !*** ./development/javascripts/components/presentational/list.jsx ***!
+  \********************************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+		value: true
+	});
+	
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+	
+	var _react = __webpack_require__(/*! react */ 1);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	var _reactDom = __webpack_require__(/*! react-dom */ 34);
+	
+	var _listItem = __webpack_require__(/*! ./list-item.jsx */ 266);
+	
+	var _listItem2 = _interopRequireDefault(_listItem);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+	
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+	
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	
+	/**
+	 * React component that will display a single timestamp from the timestamp store.
+	 */
+	var List = function (_Component) {
+		_inherits(List, _Component);
+	
+		function List() {
+			_classCallCheck(this, List);
+	
+			return _possibleConstructorReturn(this, (List.__proto__ || Object.getPrototypeOf(List)).apply(this, arguments));
+		}
+	
+		_createClass(List, [{
+			key: 'render',
+	
+	
+			/**
+	   * Renders a list item of a single entry from the timestamp store.
+	   * @return {Object} List item element.
+	   */
+			value: function render() {
+	
+				var items = this.props.items,
+				    results = [];
+	
+				if (Object.keys(items).length === 0) {
+					results.push(_react2.default.createElement(_listItem2.default, {
+						key: 'no-items',
+						value: this.props.description + ' unavailable.'
+					}));
+				} else {
+					for (var key in items) {
+						results.push(_react2.default.createElement(_listItem2.default, {
+							key: key,
+							id: items[key].id,
+							value: items[key].value
+						}));
+					}
+				}
+	
+				return _react2.default.createElement(
+					'ul',
+					{ className: this.props.className },
+					results
+				);
+			}
+		}]);
+	
+		return List;
+	}(_react.Component);
+	
+	;
+	
+	/**
+	 * Component property validation
+	 * @type {Object}
+	 */
+	List.defaultProps = {
+		description: 'Items'
+	};
+	
+	exports.default = List;
+
+/***/ },
+/* 266 */
+/*!*************************************************************************!*\
+  !*** ./development/javascripts/components/presentational/list-item.jsx ***!
+  \*************************************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+		value: true
+	});
+	
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+	
+	var _react = __webpack_require__(/*! react */ 1);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	var _reactDom = __webpack_require__(/*! react-dom */ 34);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+	
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+	
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	
+	/**
+	 * React component that will display a single timestamp from the timestamp store.
+	 */
+	var ListItem = function (_Component) {
+		_inherits(ListItem, _Component);
+	
+		function ListItem() {
+			_classCallCheck(this, ListItem);
+	
+			return _possibleConstructorReturn(this, (ListItem.__proto__ || Object.getPrototypeOf(ListItem)).apply(this, arguments));
+		}
+	
+		_createClass(ListItem, [{
+			key: 'render',
+	
+	
+			/**
+	   * Renders a list item of a single entry from the timestamp store.
+	   * @return {Object} List item element.
+	   */
+			value: function render() {
+	
+				return _react2.default.createElement(
+					'li',
+					{
+						className: this.props.className,
+						'data-id': this.props.id },
+					this.props.value
+				);
+			}
+		}]);
+	
+		return ListItem;
+	}(_react.Component);
+	
+	;
+	
+	exports.default = ListItem;
+
+/***/ },
+/* 267 */
+/*!*****************************************************!*\
+  !*** ./development/javascripts/screens/section.jsx ***!
+  \*****************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+		value: true
+	});
+	
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+	
+	var _react = __webpack_require__(/*! react */ 1);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	var _reactRouter = __webpack_require__(/*! react-router */ 196);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+	
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+	
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	
+	/**
+	 * React section controller view.
+	 */
+	var Section = function (_Component) {
+		_inherits(Section, _Component);
+	
+		function Section() {
+			_classCallCheck(this, Section);
+	
+			return _possibleConstructorReturn(this, (Section.__proto__ || Object.getPrototypeOf(Section)).apply(this, arguments));
+		}
+	
+		_createClass(Section, [{
+			key: 'render',
+	
+	
+			/**
+	   * Renders the React section controller view and any components.
+	   * @return {Object} Div element.
+	   */
+			value: function render() {
+	
+				return _react2.default.createElement(
+					'section',
+					null,
+					_react2.default.createElement(
+						'h1',
+						null,
+						'Section'
+					),
+					_react2.default.createElement(
+						'div',
+						{ className: 'list-group' },
+						_react2.default.createElement(
+							_reactRouter.Link,
+							{
+								to: '/section/sub-section',
+								className: 'list-group-item' },
+							'Sub section'
+						)
+					)
+				);
+			}
+		}]);
+	
+		return Section;
+	}(_react.Component);
+	
+	;
+	
+	exports.default = Section;
+
+/***/ },
+/* 268 */
+/*!*********************************************************!*\
+  !*** ./development/javascripts/screens/sub-section.jsx ***!
+  \*********************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+		value: true
+	});
+	
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+	
+	var _react = __webpack_require__(/*! react */ 1);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	var _reactRouter = __webpack_require__(/*! react-router */ 196);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+	
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+	
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	
+	/**
+	 * React sub section controller view.
+	 */
+	var SubSection = function (_Component) {
+		_inherits(SubSection, _Component);
+	
+		function SubSection() {
+			_classCallCheck(this, SubSection);
+	
+			return _possibleConstructorReturn(this, (SubSection.__proto__ || Object.getPrototypeOf(SubSection)).apply(this, arguments));
+		}
+	
+		_createClass(SubSection, [{
+			key: 'render',
+	
+	
+			/**
+	   * Renders the seub section and any child components.
+	   * @return {Object} Div element.
+	   */
+			value: function render() {
+	
+				return _react2.default.createElement(
+					'section',
+					null,
+					_react2.default.createElement(
+						'h1',
+						null,
+						'Sub Section'
+					),
+					_react2.default.createElement(
+						_reactRouter.Link,
+						{
+							className: 'btn btn-default',
+							to: '/section' },
+						'Go back to section'
+					)
+				);
+			}
+		}]);
+	
+		return SubSection;
+	}(_react.Component);
+	
+	;
+	
+	exports.default = SubSection;
+
+/***/ },
+/* 269 */
 /*!********************************************************!*\
   !*** ./development/javascripts/stores/application.jsx ***!
   \********************************************************/
@@ -30053,7 +30552,7 @@
 	
 	var _redux = __webpack_require__(/*! redux */ 179);
 	
-	var _index = __webpack_require__(/*! ../reducers/index.jsx */ 264);
+	var _index = __webpack_require__(/*! ../reducers/index.jsx */ 270);
 	
 	var _index2 = _interopRequireDefault(_index);
 	
@@ -30071,7 +30570,7 @@
 	;
 
 /***/ },
-/* 264 */
+/* 270 */
 /*!****************************************************!*\
   !*** ./development/javascripts/reducers/index.jsx ***!
   \****************************************************/
@@ -30085,7 +30584,7 @@
 	
 	var _redux = __webpack_require__(/*! redux */ 179);
 	
-	var _timer = __webpack_require__(/*! ./timer.jsx */ 265);
+	var _timer = __webpack_require__(/*! ./timer.jsx */ 271);
 	
 	var _timer2 = _interopRequireDefault(_timer);
 	
@@ -30096,7 +30595,7 @@
 	});
 
 /***/ },
-/* 265 */
+/* 271 */
 /*!****************************************************!*\
   !*** ./development/javascripts/reducers/timer.jsx ***!
   \****************************************************/
@@ -30172,7 +30671,7 @@
 		}
 	};
 	
-	var _timer = __webpack_require__(/*! ../constants/timer.jsx */ 266);
+	var _timer = __webpack_require__(/*! ../constants/timer.jsx */ 263);
 	
 	var _timer2 = _interopRequireDefault(_timer);
 	
@@ -30181,387 +30680,6 @@
 	var _timestamps = {};
 	
 	;
-
-/***/ },
-/* 266 */
-/*!*****************************************************!*\
-  !*** ./development/javascripts/constants/timer.jsx ***!
-  \*****************************************************/
-/***/ function(module, exports) {
-
-	'use strict';
-	
-	Object.defineProperty(exports, "__esModule", {
-		value: true
-	});
-	
-	/**
-	 * Constannts across the timer component.
-	 * @type {Object}
-	 */
-	
-	exports.default = {
-		off: 'timer:off',
-		on: 'timer:on',
-		reset: 'timer:reset',
-		save: 'timer:save',
-		set: 'timer:set'
-	};
-
-/***/ },
-/* 267 */
-/*!********************************************************************!*\
-  !*** ./development/javascripts/components/container/lap-times.jsx ***!
-  \********************************************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-	
-	Object.defineProperty(exports, "__esModule", {
-		value: true
-	});
-	
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-	
-	var _react = __webpack_require__(/*! react */ 1);
-	
-	var _react2 = _interopRequireDefault(_react);
-	
-	var _reactDom = __webpack_require__(/*! react-dom */ 34);
-	
-	var _reactRedux = __webpack_require__(/*! react-redux */ 172);
-	
-	var _button = __webpack_require__(/*! ../presentational/button.jsx */ 261);
-	
-	var _button2 = _interopRequireDefault(_button);
-	
-	var _listItem = __webpack_require__(/*! ../presentational/list-item.jsx */ 268);
-	
-	var _listItem2 = _interopRequireDefault(_listItem);
-	
-	var _timerView = __webpack_require__(/*! ../../actions/timer-view.jsx */ 262);
-	
-	var _timerView2 = _interopRequireDefault(_timerView);
-	
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-	
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-	
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-	
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-	
-	/**
-	 * Timer results React component which displays a list of
-	 * timestamps from the timer store.
-	 */
-	var LapTimes = function (_Component) {
-		_inherits(LapTimes, _Component);
-	
-		function LapTimes() {
-			_classCallCheck(this, LapTimes);
-	
-			var _this = _possibleConstructorReturn(this, (LapTimes.__proto__ || Object.getPrototypeOf(LapTimes)).call(this));
-	
-			_this.reset = _this.reset.bind(_this);
-			return _this;
-		}
-	
-		/**
-	  * Deletes all the timestamps.
-	  */
-	
-	
-		_createClass(LapTimes, [{
-			key: 'reset',
-			value: function reset() {
-				var dispatch = this.props.dispatch;
-	
-	
-				dispatch(_timerView2.default.reset());
-			}
-	
-			/**
-	   * Renders all the timestamps from the timestamp store or no results if it is empty.
-	   * @return {Object} Section element.
-	   */
-	
-		}, {
-			key: 'render',
-			value: function render() {
-	
-				var timestamps = this.props.timer.timestamps,
-				    laptimes = [];
-	
-				// There are no timestamps don't render the component
-				if (Object.keys(timestamps).length === 0) {
-					return null;
-				}
-	
-				for (var key in timestamps) {
-					laptimes.push(_react2.default.createElement(_listItem2.default, { key: key, id: timestamps[key].id, value: timestamps[key].value }));
-				}
-	
-				return _react2.default.createElement(
-					'section',
-					null,
-					_react2.default.createElement(
-						'h2',
-						null,
-						'Laptimes'
-					),
-					_react2.default.createElement(
-						'ul',
-						null,
-						laptimes
-					),
-					_react2.default.createElement(_button2.default, {
-						className: 'btn btn-danger',
-						type: 'button',
-						disabled: Object.keys(this.props.timer.timestamps).length === 0,
-						value: 'Reset',
-						onClick: this.reset })
-				);
-			}
-		}]);
-	
-		return LapTimes;
-	}(_react.Component);
-	
-	;
-	
-	/**
-	 * Connect this component to the timer store.
-	 */
-	exports.default = (0, _reactRedux.connect)(function (state) {
-		return {
-			timer: state.timer
-		};
-	})(LapTimes);
-
-/***/ },
-/* 268 */
-/*!*************************************************************************!*\
-  !*** ./development/javascripts/components/presentational/list-item.jsx ***!
-  \*************************************************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-	
-	Object.defineProperty(exports, "__esModule", {
-		value: true
-	});
-	
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-	
-	var _react = __webpack_require__(/*! react */ 1);
-	
-	var _react2 = _interopRequireDefault(_react);
-	
-	var _reactDom = __webpack_require__(/*! react-dom */ 34);
-	
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-	
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-	
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-	
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-	
-	/**
-	 * React component that will display a single timestamp from the timestamp store.
-	 */
-	var ListItem = function (_Component) {
-		_inherits(ListItem, _Component);
-	
-		function ListItem() {
-			_classCallCheck(this, ListItem);
-	
-			return _possibleConstructorReturn(this, (ListItem.__proto__ || Object.getPrototypeOf(ListItem)).apply(this, arguments));
-		}
-	
-		_createClass(ListItem, [{
-			key: 'render',
-	
-	
-			/**
-	   * Renders a list item of a single entry from the timestamp store.
-	   * @return {Object} List item element.
-	   */
-			value: function render() {
-	
-				return _react2.default.createElement(
-					'li',
-					{ 'data-id': this.props.id },
-					this.props.value
-				);
-			}
-		}]);
-	
-		return ListItem;
-	}(_react.Component);
-	
-	;
-	
-	exports.default = ListItem;
-
-/***/ },
-/* 269 */
-/*!*****************************************************!*\
-  !*** ./development/javascripts/screens/section.jsx ***!
-  \*****************************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-	
-	Object.defineProperty(exports, "__esModule", {
-		value: true
-	});
-	
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-	
-	var _react = __webpack_require__(/*! react */ 1);
-	
-	var _react2 = _interopRequireDefault(_react);
-	
-	var _reactRouter = __webpack_require__(/*! react-router */ 196);
-	
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-	
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-	
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-	
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-	
-	/**
-	 * React section controller view.
-	 */
-	var Section = function (_Component) {
-		_inherits(Section, _Component);
-	
-		function Section() {
-			_classCallCheck(this, Section);
-	
-			return _possibleConstructorReturn(this, (Section.__proto__ || Object.getPrototypeOf(Section)).apply(this, arguments));
-		}
-	
-		_createClass(Section, [{
-			key: 'render',
-	
-	
-			/**
-	   * Renders the React section controller view and any components.
-	   * @return {Object} Div element.
-	   */
-			value: function render() {
-	
-				return _react2.default.createElement(
-					'div',
-					null,
-					_react2.default.createElement(
-						'h1',
-						null,
-						'Section'
-					),
-					_react2.default.createElement(
-						'div',
-						{ className: 'list-group' },
-						_react2.default.createElement(
-							_reactRouter.Link,
-							{
-								to: '/section/sub-section',
-								className: 'list-group-item' },
-							'Sub section'
-						)
-					)
-				);
-			}
-		}]);
-	
-		return Section;
-	}(_react.Component);
-	
-	;
-	
-	exports.default = Section;
-
-/***/ },
-/* 270 */
-/*!*********************************************************!*\
-  !*** ./development/javascripts/screens/sub-section.jsx ***!
-  \*********************************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-	
-	Object.defineProperty(exports, "__esModule", {
-		value: true
-	});
-	
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-	
-	var _react = __webpack_require__(/*! react */ 1);
-	
-	var _react2 = _interopRequireDefault(_react);
-	
-	var _reactRouter = __webpack_require__(/*! react-router */ 196);
-	
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-	
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-	
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-	
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-	
-	/**
-	 * React sub section controller view.
-	 */
-	var SubSection = function (_Component) {
-		_inherits(SubSection, _Component);
-	
-		function SubSection() {
-			_classCallCheck(this, SubSection);
-	
-			return _possibleConstructorReturn(this, (SubSection.__proto__ || Object.getPrototypeOf(SubSection)).apply(this, arguments));
-		}
-	
-		_createClass(SubSection, [{
-			key: 'render',
-	
-	
-			/**
-	   * Renders the seub section and any child components.
-	   * @return {Object} Div element.
-	   */
-			value: function render() {
-	
-				return _react2.default.createElement(
-					'div',
-					null,
-					_react2.default.createElement(
-						'h1',
-						null,
-						'Sub Section'
-					),
-					_react2.default.createElement(
-						_reactRouter.Link,
-						{
-							className: 'btn btn-default',
-							to: '/section' },
-						'Go back to section'
-					)
-				);
-			}
-		}]);
-	
-		return SubSection;
-	}(_react.Component);
-	
-	;
-	
-	exports.default = SubSection;
 
 /***/ }
 /******/ ]);

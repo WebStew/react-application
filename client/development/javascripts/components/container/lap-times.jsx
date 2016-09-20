@@ -3,6 +3,7 @@ import React , 	{ Component } 	from 'react';
 import 			{ render 	} 	from 'react-dom';
 import 			{ connect 	} 	from 'react-redux';
 import Button 					from '../presentational/button.jsx';
+import List 					from '../presentational/list.jsx';
 import ListItem 				from '../presentational/list-item.jsx';
 import actions					from '../../actions/timer-view.jsx';
 
@@ -34,30 +35,27 @@ class LapTimes extends Component {
 	 */
 	render () {
 
-		let timestamps 	= this.props.timer.timestamps ,
-			laptimes 	= [];
+		let timestamps 	= this.props.timer.timestamps;
 
 		// There are no timestamps don't render the component
-		if ( Object.keys ( timestamps ).length === 0 ) {
-			return null;
-		}
-
-		for ( let key in timestamps ) {
-			laptimes.push ( <ListItem key={ key } id={timestamps [ key ].id } value={ timestamps [ key ].value } /> );
-		}
+		// if ( Object.keys ( timestamps ).length === 0 ) {
+		// 	return null;
+		// }
 
 		return (
 			<section>
-				<h2>Laptimes</h2>
-				<ul>
-					{ laptimes }
-				</ul>
+				<h2>Lap times</h2>
+				<List
+					items 		= { timestamps }
+					description = 'Lap times'
+				/>
 				<Button
 					className 	= 'btn btn-danger'
 					type 		= 'button'
-					disabled 	= { Object.keys ( this.props.timer.timestamps ).length === 0 }
+					disabled 	= { Object.keys ( timestamps ).length === 0 }
 					value 		= 'Reset'
-					onClick 	= { this.reset } />
+					onClick 	= { this.reset }
+				/>
 			</section>
 		);
 	}
