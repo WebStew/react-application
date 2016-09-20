@@ -1,5 +1,4 @@
 
-import store 		from '../stores/application.jsx';
 import constants 	from '../constants/timer.jsx';
 
 /**
