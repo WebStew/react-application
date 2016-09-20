@@ -5,7 +5,7 @@ import 			{ render } 		from 'react-dom';
 /**
  * React component that will display a single timestamp from the timestamp store.
  */
-class TimerResult extends Component {
+class ListItem extends Component {
 
 	/**
 	 * Renders a list item of a single entry from the timestamp store.
@@ -14,10 +14,9 @@ class TimerResult extends Component {
 	render () {
 
 		return (
-			<li data-id={ this.props.timestamp.id }>{ this.props.timestamp.value }</li>
+			<li data-id={ this.props.id }>{ this.props.value }</li>
 		);
 	}
+};
 
-}
-
-export default TimerResult
+export default ListItem;

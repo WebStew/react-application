@@ -28,6 +28,6 @@ class NavigationPrimary extends Component {
 			</nav>
 		);
 	}
-}
+};
 
-export default NavigationPrimary
+export default NavigationPrimary;

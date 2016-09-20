@@ -16,7 +16,8 @@ class Section extends Component {
 		return (
 			<div>
 				<h1>Section</h1>
-				<div className="list-group">
+				<div className='list-group'>
+
 					<Link
 						to 			= { '/section/sub-section' }
 						className 	= 'list-group-item'>
@@ -26,6 +27,6 @@ class Section extends Component {
 			</div>
 		);
 	}
-}
+};
 
-export default Section
+export default Section;

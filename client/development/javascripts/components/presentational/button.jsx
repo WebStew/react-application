@@ -18,6 +18,6 @@ class Button extends Component {
 			</button>
 		)
 	}
-}
+};
 
 export default Button;

@@ -6,10 +6,10 @@ var webpack 		= require ( 'webpack' 	) ,
 		application : path.resolve ( __dirname , 'development/javascripts' 	)
 	} 																,
 	configuration 	= {
-		entry 		: directories.application + '/application.jsx' 	,
+		entry 		: directories.application + '/router.jsx' 	,
 		output 		: {
 			path 		: directories.build 						,
-			filename 	: 'application.js'
+			filename 	: 'router.js'
 		} 															,
 		module : {
 			loaders 	: [{

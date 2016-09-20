@@ -1,7 +1,7 @@
 
 import React, 	{ Component } 	from 'react';
 import 			{ Link 		} 	from 'react-router';
-import NavigationPrimary 		from '../components/navigation-primary.jsx';
+import NavigationPrimary 		from '../components/container/navigation-primary.jsx';
 
 /**
  * React controller view to handle the root page components.
@@ -17,13 +17,11 @@ class Main extends Component {
 			<div>
 				<NavigationPrimary />
 				<div className='container'>
-					{
-						this.props.children
-					}
+					{ this.props.children }
 				</div>
 			</div>
 		);
 	}
-}
+};
 
-export default Main
+export default Main;

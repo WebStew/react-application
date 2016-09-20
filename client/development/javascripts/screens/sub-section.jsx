@@ -14,9 +14,9 @@ class SubSection extends Component {
 	render () {
 
 		return (
-
 			<div>
 				<h1>Sub Section</h1>
+
 				<Link
 					className 	= 'btn btn-default'
 					to 			= '/section'>
@@ -25,6 +25,6 @@ class SubSection extends Component {
 			</div>
 		);
 	}
-}
+};
 
-export default SubSection
+export default SubSection;

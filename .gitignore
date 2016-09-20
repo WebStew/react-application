@@ -61,3 +61,7 @@ web.config
 #####################
 .idea
 *.swp
+
+# Debugging maps #
+##################
+*.js.map
