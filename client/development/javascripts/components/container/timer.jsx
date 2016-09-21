@@ -3,7 +3,7 @@ import React , 	{ Component 			} 	from 'react';
 import 			{ render 				} 	from 'react-dom';
 import 			{ connect 				} 	from 'react-redux';
 import Button 								from '../presentational/button.jsx';
-import actions 								from '../../actions/timer-view.jsx';
+import actions 								from '../../actions/timer.jsx';
 
 /**
  * Timer React component

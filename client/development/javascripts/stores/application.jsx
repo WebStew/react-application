@@ -5,7 +5,7 @@ import { 	createStore 	,
 import 		reducers 			from '../reducers/index.jsx';
 // import 		thunk 				from 'redux-thunk';
 // import 		invariant 			from 'redux-immutable-state-invariant';
-import * as actionTimers 		from '../actions/timer-view.jsx';
+import * as actionTimers 		from '../actions/timer.jsx';
 
 export let isMonitorAction;
 

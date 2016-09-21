@@ -29693,9 +29693,9 @@
 	
 	var _button2 = _interopRequireDefault(_button);
 	
-	var _timerView = __webpack_require__(/*! ../../actions/timer-view.jsx */ 262);
+	var _timer = __webpack_require__(/*! ../../actions/timer.jsx */ 262);
 	
-	var _timerView2 = _interopRequireDefault(_timerView);
+	var _timer2 = _interopRequireDefault(_timer);
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
@@ -29738,8 +29738,8 @@
 	
 				var value = this.props.timer.value;
 	
-				dispatch(_timerView2.default.off());
-				dispatch(_timerView2.default.set(value));
+				dispatch(_timer2.default.off());
+				dispatch(_timer2.default.set(value));
 				clearInterval(this.interval);
 			}
 	
@@ -29757,7 +29757,7 @@
 				// I don't think we should be dispatching here on interval?
 				// Potentially creates a lot of dispatched actions that need to go through
 				// all the reducers
-				dispatch(_timerView2.default.set(value));
+				dispatch(_timer2.default.set(value));
 			}
 	
 			/**
@@ -29770,7 +29770,7 @@
 				var dispatch = this.props.dispatch;
 	
 	
-				dispatch(_timerView2.default.set(0));
+				dispatch(_timer2.default.set(0));
 			}
 	
 			/**
@@ -29784,7 +29784,7 @@
 	
 				var value = this.props.timer.value;
 	
-				dispatch(_timerView2.default.save(value));
+				dispatch(_timer2.default.save(value));
 			}
 	
 			/**
@@ -29799,7 +29799,7 @@
 	
 	
 				this.interval = setInterval(this.tick.bind(this), this.props.interval);
-				dispatch(_timerView2.default.on());
+				dispatch(_timer2.default.on());
 			}
 	
 			/**
@@ -29814,7 +29814,7 @@
 	
 	
 				clearInterval(this.interval);
-				dispatch(_timerView2.default.off());
+				dispatch(_timer2.default.off());
 			}
 	
 			/**
@@ -29964,9 +29964,9 @@
 
 /***/ },
 /* 262 */
-/*!********************************************************!*\
-  !*** ./development/javascripts/actions/timer-view.jsx ***!
-  \********************************************************/
+/*!***************************************************!*\
+  !*** ./development/javascripts/actions/timer.jsx ***!
+  \***************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -30103,9 +30103,9 @@
 	
 	var _listItem2 = _interopRequireDefault(_listItem);
 	
-	var _timerView = __webpack_require__(/*! ../../actions/timer-view.jsx */ 262);
+	var _timer = __webpack_require__(/*! ../../actions/timer.jsx */ 262);
 	
-	var _timerView2 = _interopRequireDefault(_timerView);
+	var _timer2 = _interopRequireDefault(_timer);
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
@@ -30142,7 +30142,7 @@
 				var dispatch = this.props.dispatch;
 	
 	
-				dispatch(_timerView2.default.reset());
+				dispatch(_timer2.default.reset());
 			}
 	
 			/**
@@ -30556,9 +30556,9 @@
 	
 	var _index2 = _interopRequireDefault(_index);
 	
-	var _timerView = __webpack_require__(/*! ../actions/timer-view.jsx */ 262);
+	var _timer = __webpack_require__(/*! ../actions/timer.jsx */ 262);
 	
-	var actionTimers = _interopRequireWildcard(_timerView);
+	var actionTimers = _interopRequireWildcard(_timer);
 	
 	function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
 	

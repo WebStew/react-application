@@ -5,7 +5,7 @@ import 			{ connect 	} 	from 'react-redux';
 import Button 					from '../presentational/button.jsx';
 import List 					from '../presentational/list.jsx';
 import ListItem 				from '../presentational/list-item.jsx';
-import actions					from '../../actions/timer-view.jsx';
+import actions					from '../../actions/timer.jsx';
 
 /**
  * Timer results React component which displays a list of
