@@ -30059,8 +30059,8 @@
 	 * Constannts across the timer component.
 	 * @type {Object}
 	 */
-	
 	exports.default = {
+	
 		off: 'timer:off',
 		on: 'timer:on',
 		reset: 'timer:reset',
@@ -30588,9 +30588,14 @@
 	
 	var _timer2 = _interopRequireDefault(_timer);
 	
+	var _reddit = __webpack_require__(/*! ./reddit.jsx */ 272);
+	
+	var _reddit2 = _interopRequireDefault(_reddit);
+	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
 	exports.default = (0, _redux.combineReducers)({
+		reddit: _reddit2.default,
 		timer: _timer2.default
 	});
 
@@ -30680,6 +30685,74 @@
 	var _timestamps = {};
 	
 	;
+
+/***/ },
+/* 272 */
+/*!*****************************************************!*\
+  !*** ./development/javascripts/reducers/reddit.jsx ***!
+  \*****************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+		value: true
+	});
+	
+	exports.default = function () {
+		var state = arguments.length <= 0 || arguments[0] === undefined ? {} : arguments[0];
+		var action = arguments[1];
+	
+	
+		switch (action.type) {
+	
+			case _reddit2.default.select:
+	
+				return Object.assign({}, state, {
+					off: true,
+					on: false
+				});
+				break;
+	
+			default:
+				return state;
+		}
+	};
+	
+	var _reddit = __webpack_require__(/*! ../constants/reddit.jsx */ 273);
+	
+	var _reddit2 = _interopRequireDefault(_reddit);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	var _reddits = {};
+	
+	;
+
+/***/ },
+/* 273 */
+/*!******************************************************!*\
+  !*** ./development/javascripts/constants/reddit.jsx ***!
+  \******************************************************/
+/***/ function(module, exports) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+		value: true
+	});
+	
+	/**
+	 * Constannts across the reddit component.
+	 * @type {Object}
+	 */
+	exports.default = {
+	
+		error: 'reddit:error',
+		receive: 'reddit:receive',
+		request: 'reddit:request',
+		select: 'reddit:select'
+	};
 
 /***/ }
 /******/ ]);
