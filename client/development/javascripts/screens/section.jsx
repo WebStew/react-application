@@ -1,6 +1,8 @@
 
 import React , 	{ Component } 	from 'react';
 import 			{ Link 		} 	from 'react-router';
+import RedditSearch 			from '../components/container/reddit-search.jsx';
+import Reddits 					from '../components/container/reddits.jsx';
 
 /**
  * React section controller view.
@@ -16,14 +18,13 @@ class Section extends Component {
 		return (
 			<section>
 				<h1>Section</h1>
-				<div className = 'list-group'>
-
-					<Link
-						to 			= { '/section/sub-section' }
-						className 	= 'list-group-item'>
-						Sub section
-					</Link>
-				</div>
+				<Link
+					to 			= { '/section/sub-section' }
+					className 	= 'btn btn-default'>
+					Sub section
+				</Link>
+				<RedditSearch 	/>
+				<Reddits 		/>
 			</section>
 		);
 	}

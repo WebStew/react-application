@@ -3,9 +3,10 @@ import { 	createStore 	,
 			applyMiddleware ,
 			compose 		} 	from 'redux';
 import 		reducers 			from '../reducers/index.jsx';
-// import 		thunk 				from 'redux-thunk';
-// import 		invariant 			from 'redux-immutable-state-invariant';
-import * as actionTimers 		from '../actions/timer.jsx';
+import 		thunk 				from 'redux-thunk';
+import 		logger 				from 'redux-logger';
+import * as actionReddit 		from '../actions/reddit.jsx';
+import * as actionTimer 		from '../actions/timer.jsx';
 
 export let isMonitorAction;
 
@@ -15,12 +16,16 @@ export default function ( state ) {
 		reducers 	,
 		state 		,
 		compose (
-		//applyMiddleware ( invariant () , thunk ) ,
+		applyMiddleware (
+			thunk 	,
+			logger ()
+		) ,
 		window.devToolsExtension ? window.devToolsExtension ({
 			getMonitor : ( monitor ) => {
 				isMonitorAction = monitor.isMonitorAction;
 			} ,
-			actionTimers
+			actionTimer ,
+			actionReddit
 		}) : f => f
 	));
 

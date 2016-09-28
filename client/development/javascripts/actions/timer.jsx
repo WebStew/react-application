@@ -10,18 +10,14 @@ export default {
 	off () {
 
 		return {
-			type 	: constants.off ,
-			off 	: true 			,
-			on 		: false
+			type 	: constants.off
 		};
 	} ,
 
 	on () {
 
 		return {
-			type 	: constants.on 	,
-			off 	: false 		,
-			on 		: true
+			type 	: constants.on
 		};
 	} ,
 
@@ -40,11 +36,11 @@ export default {
 	 * Dispatches the timer has stopped action.
 	 * @param  {Number} time The value of timer when it stopped.
 	 */
-	save ( time ) {
+	save ( value ) {
 
 		return {
 			type 	: constants.save ,
-			value 	: time
+			value
 		};
 	} ,
 
@@ -52,11 +48,11 @@ export default {
 	 * Dispatches the timer has stopped action.
 	 * @param  {Number} time The value of timer when it stopped.
 	 */
-	set ( time ) {
+	set ( value ) {
 
 		return {
 			type 	: constants.set ,
-			value 	: time
+			value
 		};
 	}
 };

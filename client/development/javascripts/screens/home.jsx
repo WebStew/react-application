@@ -20,8 +20,8 @@ class Home extends Component {
 				<h1>Home page</h1>
 				<p>Including the stopwatch component</p>
 
-				<Timer interval='1' />
-				<LapTimes 			/>
+				<Timer interval='10' 	/>
+				<LapTimes 				/>
 			</section>
 		);
 	}
