@@ -2,8 +2,8 @@
 import React , 	{ Component 			} 	from 'react';
 import 			{ render 				} 	from 'react-dom';
 import 			{ connect 				} 	from 'react-redux';
-import actions 								from '../../actions/reddit.jsx';
-import Button 								from '../presentational/button.jsx';
+import actions 								from 'actions/reddit';
+import Button 								from 'components/presentational/button';
 
 /**
  * Reddit React component

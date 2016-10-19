@@ -1,5 +1,5 @@
 
-import constants 	from '../constants/timer.jsx';
+import constants 	from 'constants/timer.jsx';
 
 /**
  * Actions for the timer.

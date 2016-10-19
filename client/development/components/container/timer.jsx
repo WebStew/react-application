@@ -2,8 +2,10 @@
 import React , 	{ Component 			} 	from 'react';
 import 			{ render 				} 	from 'react-dom';
 import 			{ connect 				} 	from 'react-redux';
-import Button 								from '../presentational/button.jsx';
-import actions 								from '../../actions/timer.jsx';
+import Button 								from 'components/presentational/button';
+import actions 								from 'actions/timer';
+
+//import '../../../stylesheets/transitions/opacity.css';
 
 /**
  * Timer React component

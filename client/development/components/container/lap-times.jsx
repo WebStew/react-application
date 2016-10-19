@@ -2,10 +2,10 @@
 import React , 	{ Component } 	from 'react';
 import 			{ render 	} 	from 'react-dom';
 import 			{ connect 	} 	from 'react-redux';
-import Button 					from '../presentational/button.jsx';
-import List 					from '../presentational/list.jsx';
-import ListItem 				from '../presentational/list-item.jsx';
-import actions					from '../../actions/timer.jsx';
+import Button 					from 'components/presentational/button';
+import List 					from 'components/presentational/list';
+import ListItem 				from 'components/presentational/list-item';
+import actions					from 'actions/timer';
 
 /**
  * Timer results React component which displays a list of

@@ -1,6 +1,6 @@
 
 import React , 	{ Component } 	from 'react';
-import NavigationPrimary 		from '../components/container/navigation-primary.jsx';
+import NavigationPrimary 		from 'components/container/navigation-primary';
 
 /**
  * React controller view to handle the root page components.

@@ -1,8 +1,8 @@
 
 import React , 	{ Component } 	from 'react';
 import 			{ render 	} 	from 'react-dom';
-import Timer 					from '../components/container/timer.jsx';
-import LapTimes 				from '../components/container/lap-times.jsx';
+import Timer 					from 'components/container/timer';
+import LapTimes 				from 'components/container/lap-times';
 
 /**
  * React home page controller view.

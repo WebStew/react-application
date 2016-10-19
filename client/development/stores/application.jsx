@@ -2,11 +2,11 @@
 import { 	createStore 	,
 			applyMiddleware ,
 			compose 		} 	from 'redux';
-import 		reducers 			from '../reducers/index.jsx';
+import 		reducers 			from 'reducers/index';
 import 		thunk 				from 'redux-thunk';
 import 		logger 				from 'redux-logger';
-import * as actionReddit 		from '../actions/reddit.jsx';
-import * as actionTimer 		from '../actions/timer.jsx';
+import * as actionReddit 		from 'actions/reddit';
+import * as actionTimer 		from 'actions/timer';
 
 export let isMonitorAction;
 

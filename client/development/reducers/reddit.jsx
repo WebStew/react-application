@@ -1,5 +1,5 @@
 
-import constants from '../constants/reddit.jsx';
+import constants from 'constants/reddit';
 
 let _reddits = {};
 

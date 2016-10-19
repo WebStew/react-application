@@ -1,8 +1,8 @@
 
 import React , 	{ Component } 	from 'react';
 import 			{ Link 		} 	from 'react-router';
-import RedditSearch 			from '../components/container/reddit-search.jsx';
-import Reddits 					from '../components/container/reddits.jsx';
+import RedditSearch 			from 'components/container/reddit-search';
+import Reddits 					from 'components/container/reddits';
 
 /**
  * React section controller view.

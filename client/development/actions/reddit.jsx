@@ -1,6 +1,6 @@
 
-import constants 	from '../constants/reddit.jsx';
-import api 			from '../api/reddit.jsx';
+import constants 	from 'constants/reddit.jsx';
+import api 			from 'api/reddit.jsx';
 
 const error = function ( value ) {
 

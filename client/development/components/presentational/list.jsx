@@ -1,7 +1,8 @@
 
 import React , 	{ Component } 	from 'react';
 import 			{ render } 		from 'react-dom';
-import ListItem 				from './list-item.jsx';
+import ListItem 				from 'components/presentational/list-item';
+import Transition 				from 'react-addons-css-transition-group';
 
 /**
  * React component that will display a single timestamp from the timestamp store.
@@ -40,7 +41,13 @@ class List extends Component {
 
 		return (
 			<ul className = { this.props.className }>
+			 <Transition
+				transitionName 			= 'transition-opacity'
+				transitionEnterTimeout 	= { 1500 }
+				transitionLeaveTimeout 	= { 300 }
+			 >
 				{ results }
+			</Transition>
 			</ul>
 		);
 	}

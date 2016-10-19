@@ -1,19 +1,21 @@
 
-
-import React , 	{ Component } 	from 'react';
-import 			{ render 	} 	from 'react-dom';
-import          { Provider  }   from 'react-redux';
+import 									'babel-polyfill';
+import React , 	{ Component } 	from 	'react';
+import 			{ render 	} 	from 	'react-dom';
+import          { Provider  }   from 	'react-redux';
 import 			{
 					Router 			,
 					Route 			,
 					IndexRoute 		,
 					browserHistory
-				} 				from 'react-router';
-import MainView 				from './screens/main.jsx';
-import HomeView 				from './screens/home.jsx';
-import SectionView 				from './screens/section.jsx';
-import SubSectionView 			from './screens/sub-section.jsx';
-import setStore 				from './stores/application.jsx';
+				} 				from 	'react-router';
+import MainView 				from 	'screens/main';
+import HomeView 				from 	'screens/home';
+import SectionView 				from 	'screens/section';
+import SubSectionView 			from 	'screens/sub-section';
+import setStore 				from 	'stores/application';
+
+import 									'stylesheets/application';
 
 const store = setStore ();
 
@@ -24,6 +26,7 @@ render (
 			<Route
 				path 		= '/'
 				component 	= { MainView }>
+
 				<IndexRoute
 					component 	= { HomeView }
 				/>
@@ -35,6 +38,7 @@ render (
 					path 		= '/section/:id'
 					component 	= { SubSectionView 	}
 				/>
+
 			</Route>
 		</Router>
 	</Provider> ,
