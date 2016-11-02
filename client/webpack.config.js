@@ -2,7 +2,7 @@
 var webpack 		= require ( 'webpack' 						) 	,
 	path 			= require ( 'path' 							) 	,
 	Extractor 		= require ( 'extract-text-webpack-plugin' 	) 	,
-	//postcss 		= require ( './postcss.config' 	) 							,
+	postcss 		= require ( './postcss.config' 				) 	,
 	directories 	= {
 		build 		: path.resolve ( __dirname , 'public' 		) 	,
 		application : path.resolve ( __dirname , 'development' 	)
@@ -13,11 +13,11 @@ module.exports = {
 		application 	: directories.application + '/application'
 	} 																			,
 
-    output 		: {
-        chunkFilename 	: '[id].js' 											,
-        filename 		: '[name].js'											,
+	output 		: {
+		chunkFilename 	: '[id].js' 											,
+		filename 		: '[name].js'											,
 		path 			: directories.build
-    } 																			,
+	} 																			,
 
 	resolve 	: {
 		root 	: [
@@ -56,8 +56,8 @@ module.exports = {
 		]
 	} 																			,
 	plugins 	: [
-		new Extractor ( '[name].css' {
+		new Extractor ( '[name].css', {
 			allChunks : true
-        });
+		})
 	]
 };

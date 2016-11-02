@@ -27,6 +27,7 @@ const error = function ( value ) {
 		};
 	};
 
+
 /**
  * Actions for the timer.
  * @type {Object}

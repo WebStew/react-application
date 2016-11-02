@@ -15,7 +15,7 @@ import SectionView 				from 	'screens/section';
 import SubSectionView 			from 	'screens/sub-section';
 import setStore 				from 	'stores/application';
 
-import 									'stylesheets/application';
+//import 									'stylesheets/application';
 
 const store = setStore ();
 

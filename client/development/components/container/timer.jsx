@@ -5,8 +5,6 @@ import 			{ connect 				} 	from 'react-redux';
 import Button 								from 'components/presentational/button';
 import actions 								from 'actions/timer';
 
-//import '../../../stylesheets/transitions/opacity.css';
-
 /**
  * Timer React component
  */
