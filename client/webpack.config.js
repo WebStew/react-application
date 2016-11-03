@@ -1,63 +1,38 @@
 
-var webpack 		= require ( 'webpack' 						) 	,
-	path 			= require ( 'path' 							) 	,
-	Extractor 		= require ( 'extract-text-webpack-plugin' 	) 	,
-	postcss 		= require ( './postcss.config' 				) 	,
-	directories 	= {
-		build 		: path.resolve ( __dirname , 'public' 		) 	,
-		application : path.resolve ( __dirname , 'development' 	)
-	} 																;
+var configuration 	= {
+		output 		: require ( './configuration/build/output' 				) ,
+		resolver 	: require ( './configuration/build/module-resolver' 	)
+	} ,
 
-module.exports = {
-	entry 		: {
-		application 	: directories.application + '/application'
-	} 																			,
+	filesystem 		= {
+		directories : require ( './configuration/file-system/directories' 	) ,
+		files 		: require ( './configuration/file-system/files'			)
+	} ,
 
-	output 		: {
-		chunkFilename 	: '[id].js' 											,
-		filename 		: '[name].js'											,
-		path 			: directories.build
-	} 																			,
+	loaders 		= {
+		css 		: require ( './configuration/build/loader-css' 			) ,
+		jsx 		: require ( './configuration/build/loader-jsx' 			)
+	} ,
 
-	resolve 	: {
-		root 	: [
-			path.resolve ( './development' )
-		] 																		,
-		extensions 			: [
-			'' 																	,
-			'.css' 																,
-			'.js' 																,
-			'.jsx'
-		]
-	} 																			,
-	module 		: {
+	plugins 		= {
+		extractor 	: require ( './configuration/build/plugin-extractor' 	) ,
+		postcss 	: require ( './configuration/build/plugin-postcss' 		)
+	};
+
+module.exports 		= {
+	entry 			: {
+		application : filesystem.directories.application + '/' + filesystem.files.index
+	} ,
+	output			: configuration.output 		,
+	resolve			: configuration.resolver 	,
+	module			: {
 		loaders 	: [
-			{
-				test 	: /\.css$/ 												,
-				loader 	: Extractor.extract (
-					'style-loader' 												,
-					'css-loader' 												,
-					'postcss-loader'
-				)
-			} 																	,
-
-			{
-				test 	: /\.jsx?/ 												,
-				include : directories.application 								,
-				exclude : /node_modules/ 										,
-				loader 	: 'babel-loader' 										,
-				query 	: {
-					presets : [
-						'es2015' 												,
-						'react'
-					]
-				}
-			}
+			loaders.css ,
+			loaders.jsx
 		]
-	} 																			,
-	plugins 	: [
-		new Extractor ( '[name].css', {
-			allChunks : true
-		})
+	} ,
+	postcss			: plugins.postcss ,
+	plugins 		: [
+		plugins.extractor
 	]
 };
