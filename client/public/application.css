@@ -6,3 +6,80 @@
 .transition-opacity-leave {
 	background: yellow;
 }
+
+:root {
+
+	/* Fonts */
+	/*--font-family-body   : Tahoma, Geneva, sans-serif;
+	--font-family-code   : 'Courier New', Courier, monospace;
+	--font-family-quote  : Georgia, serif;*/
+
+	/* Font sizes */
+	/*--font-size-body : 14px;
+	--relative       : 1em;*/
+
+	/* Colours */
+	/*--color-actioned : #a203fe;
+	--color-body     : #333;
+	--color-error    : #f63400;
+	--color-highlight: lighten( --color-action, 35 );
+	--color-valid    : #03fe0f;
+	--color-warning  : #fe8b03;*/
+
+	/* Media query sizes */
+	/*--mobile-portrait    : 320px;
+	--mobile-landscape   : 480px;
+	--phablet            : 768px;
+	--desktop-small      : 1024px;
+	--desktop-medium     : 1280px;
+	--desktop-large      : 1350px;*/
+
+}
+
+a {
+	display : -webkit-box;
+	display : -ms-flexbox;
+	display : flex;
+	color : yellow;
+}
+
+/*::selection {
+	background 	: var( --color-highlight 	);
+	color 		: var( --color-body 		);
+	text-shadow : none;
+}
+
+::-moz-selection {
+	background 	: var( --color-highlight 	);
+	color 		: var( --color-body 		);
+	text-shadow : none;
+}
+
+body {
+	color 		: var( --color-body 		);
+	font-family : var( --font-family-body 	);
+	font-size 	: var( --font-size-body 	);
+	height 		: 100%;
+	line-height	: 1.4;
+	padding 	: 10px 20px;
+
+	/*@include media( mobile-landscape ) {
+		line-height : 1.6;
+		padding 	: 20px 40px;
+	}*/
+
+/*}
+
+hr {
+	display 	: block;
+	height 		: 1px;
+	border 		: 0;
+	border-top 	: 1px solid var( --color-body );
+	margin 		: 15px 0;
+	padding 	: 0;
+}
+
+html {
+	height 		: 100%;
+	overflow-y 	: scroll;
+}*/

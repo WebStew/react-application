@@ -1,4 +1,8 @@
 
+
+var Extractor = require ( 'extract-text-webpack-plugin' );
+//var webpack = require ( 'webpack' );
+
 var configuration 	= {
 		output 		: require ( './configuration/build/output' 				) ,
 		resolver 	: require ( './configuration/build/module-resolver' 	)
@@ -31,7 +35,7 @@ module.exports 		= {
 			loaders.jsx
 		]
 	} ,
-	postcss			: plugins.postcss ,
+	postcss			: plugins.postcss , 
 	plugins 		: [
 		plugins.extractor
 	]

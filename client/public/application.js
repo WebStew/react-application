@@ -66,15 +66,15 @@
 
 	var _home2 = _interopRequireDefault(_home);
 
-	var _section = __webpack_require__(577);
+	var _section = __webpack_require__(578);
 
 	var _section2 = _interopRequireDefault(_section);
 
-	var _subSection = __webpack_require__(606);
+	var _subSection = __webpack_require__(607);
 
 	var _subSection2 = _interopRequireDefault(_subSection);
 
-	var _application = __webpack_require__(609);
+	var _application = __webpack_require__(610);
 
 	var _application2 = _interopRequireDefault(_application);
 
@@ -37504,6 +37504,8 @@
 
 	__webpack_require__(576);
 
+	__webpack_require__(577);
+
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -38492,6 +38494,12 @@
 
 /***/ },
 /* 577 */
+/***/ function(module, exports) {
+
+	// removed by extract-text-webpack-plugin
+
+/***/ },
+/* 578 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -38508,11 +38516,11 @@
 
 	var _reactRouter = __webpack_require__(498);
 
-	var _redditSearch = __webpack_require__(578);
+	var _redditSearch = __webpack_require__(579);
 
 	var _redditSearch2 = _interopRequireDefault(_redditSearch);
 
-	var _reddits = __webpack_require__(604);
+	var _reddits = __webpack_require__(605);
 
 	var _reddits2 = _interopRequireDefault(_reddits);
 
@@ -38575,7 +38583,7 @@
 	exports.default = Section;
 
 /***/ },
-/* 578 */
+/* 579 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -38594,7 +38602,7 @@
 
 	var _reactRedux = __webpack_require__(468);
 
-	var _reddit = __webpack_require__(579);
+	var _reddit = __webpack_require__(580);
 
 	var _reddit2 = _interopRequireDefault(_reddit);
 
@@ -38707,7 +38715,7 @@
 	})(RedditSearch);
 
 /***/ },
-/* 579 */
+/* 580 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -38716,11 +38724,11 @@
 		value: true
 	});
 
-	var _reddit = __webpack_require__(580);
+	var _reddit = __webpack_require__(581);
 
 	var _reddit2 = _interopRequireDefault(_reddit);
 
-	var _reddit3 = __webpack_require__(581);
+	var _reddit3 = __webpack_require__(582);
 
 	var _reddit4 = _interopRequireDefault(_reddit3);
 
@@ -38789,7 +38797,7 @@
 	};
 
 /***/ },
-/* 580 */
+/* 581 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -38811,7 +38819,7 @@
 	};
 
 /***/ },
-/* 581 */
+/* 582 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -38820,7 +38828,7 @@
 		value: true
 	});
 
-	var _axios = __webpack_require__(582);
+	var _axios = __webpack_require__(583);
 
 	var ajax = _interopRequireWildcard(_axios);
 
@@ -38838,20 +38846,20 @@
 	};
 
 /***/ },
-/* 582 */
+/* 583 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__(583);
+	module.exports = __webpack_require__(584);
 
 /***/ },
-/* 583 */
+/* 584 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var utils = __webpack_require__(584);
-	var bind = __webpack_require__(585);
-	var Axios = __webpack_require__(586);
+	var utils = __webpack_require__(585);
+	var bind = __webpack_require__(586);
+	var Axios = __webpack_require__(587);
 
 	/**
 	 * Create an instance of Axios
@@ -38887,7 +38895,7 @@
 	axios.all = function all(promises) {
 	  return Promise.all(promises);
 	};
-	axios.spread = __webpack_require__(603);
+	axios.spread = __webpack_require__(604);
 
 	module.exports = axios;
 
@@ -38896,12 +38904,12 @@
 
 
 /***/ },
-/* 584 */
+/* 585 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var bind = __webpack_require__(585);
+	var bind = __webpack_require__(586);
 
 	/*global toString:true*/
 
@@ -39201,7 +39209,7 @@
 
 
 /***/ },
-/* 585 */
+/* 586 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -39218,17 +39226,17 @@
 
 
 /***/ },
-/* 586 */
+/* 587 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var defaults = __webpack_require__(587);
-	var utils = __webpack_require__(584);
-	var InterceptorManager = __webpack_require__(589);
-	var dispatchRequest = __webpack_require__(590);
-	var isAbsoluteURL = __webpack_require__(601);
-	var combineURLs = __webpack_require__(602);
+	var defaults = __webpack_require__(588);
+	var utils = __webpack_require__(585);
+	var InterceptorManager = __webpack_require__(590);
+	var dispatchRequest = __webpack_require__(591);
+	var isAbsoluteURL = __webpack_require__(602);
+	var combineURLs = __webpack_require__(603);
 
 	/**
 	 * Create a new instance of Axios
@@ -39309,13 +39317,13 @@
 
 
 /***/ },
-/* 587 */
+/* 588 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var utils = __webpack_require__(584);
-	var normalizeHeaderName = __webpack_require__(588);
+	var utils = __webpack_require__(585);
+	var normalizeHeaderName = __webpack_require__(589);
 
 	var PROTECTION_PREFIX = /^\)\]\}',?\n/;
 	var DEFAULT_CONTENT_TYPE = {
@@ -39387,12 +39395,12 @@
 
 
 /***/ },
-/* 588 */
+/* 589 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var utils = __webpack_require__(584);
+	var utils = __webpack_require__(585);
 
 	module.exports = function normalizeHeaderName(headers, normalizedName) {
 	  utils.forEach(headers, function processHeader(value, name) {
@@ -39405,12 +39413,12 @@
 
 
 /***/ },
-/* 589 */
+/* 590 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var utils = __webpack_require__(584);
+	var utils = __webpack_require__(585);
 
 	function InterceptorManager() {
 	  this.handlers = [];
@@ -39463,13 +39471,13 @@
 
 
 /***/ },
-/* 590 */
+/* 591 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {'use strict';
 
-	var utils = __webpack_require__(584);
-	var transformData = __webpack_require__(591);
+	var utils = __webpack_require__(585);
+	var transformData = __webpack_require__(592);
 
 	/**
 	 * Dispatch a request to the server using whichever adapter
@@ -39510,10 +39518,10 @@
 	    adapter = config.adapter;
 	  } else if (typeof XMLHttpRequest !== 'undefined') {
 	    // For browsers use XHR adapter
-	    adapter = __webpack_require__(592);
+	    adapter = __webpack_require__(593);
 	  } else if (typeof process !== 'undefined') {
 	    // For node use HTTP adapter
-	    adapter = __webpack_require__(592);
+	    adapter = __webpack_require__(593);
 	  }
 
 	  return Promise.resolve(config)
@@ -39545,12 +39553,12 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(294)))
 
 /***/ },
-/* 591 */
+/* 592 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var utils = __webpack_require__(584);
+	var utils = __webpack_require__(585);
 
 	/**
 	 * Transform the data for a request or a response
@@ -39571,18 +39579,18 @@
 
 
 /***/ },
-/* 592 */
+/* 593 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {'use strict';
 
-	var utils = __webpack_require__(584);
-	var settle = __webpack_require__(593);
-	var buildURL = __webpack_require__(596);
-	var parseHeaders = __webpack_require__(597);
-	var isURLSameOrigin = __webpack_require__(598);
-	var createError = __webpack_require__(594);
-	var btoa = (typeof window !== 'undefined' && window.btoa) || __webpack_require__(599);
+	var utils = __webpack_require__(585);
+	var settle = __webpack_require__(594);
+	var buildURL = __webpack_require__(597);
+	var parseHeaders = __webpack_require__(598);
+	var isURLSameOrigin = __webpack_require__(599);
+	var createError = __webpack_require__(595);
+	var btoa = (typeof window !== 'undefined' && window.btoa) || __webpack_require__(600);
 
 	module.exports = function xhrAdapter(config) {
 	  return new Promise(function dispatchXhrRequest(resolve, reject) {
@@ -39676,7 +39684,7 @@
 	    // This is only done if running in a standard browser environment.
 	    // Specifically not if we're in a web worker, or react-native.
 	    if (utils.isStandardBrowserEnv()) {
-	      var cookies = __webpack_require__(600);
+	      var cookies = __webpack_require__(601);
 
 	      // Add xsrf header
 	      var xsrfValue = (config.withCredentials || isURLSameOrigin(config.url)) && config.xsrfCookieName ?
@@ -39740,12 +39748,12 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(294)))
 
 /***/ },
-/* 593 */
+/* 594 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var createError = __webpack_require__(594);
+	var createError = __webpack_require__(595);
 
 	/**
 	 * Resolve or reject a Promise based on response status.
@@ -39771,12 +39779,12 @@
 
 
 /***/ },
-/* 594 */
+/* 595 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var enhanceError = __webpack_require__(595);
+	var enhanceError = __webpack_require__(596);
 
 	/**
 	 * Create an Error with the specified message, config, error code, and response.
@@ -39794,7 +39802,7 @@
 
 
 /***/ },
-/* 595 */
+/* 596 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -39819,12 +39827,12 @@
 
 
 /***/ },
-/* 596 */
+/* 597 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var utils = __webpack_require__(584);
+	var utils = __webpack_require__(585);
 
 	function encode(val) {
 	  return encodeURIComponent(val).
@@ -39893,12 +39901,12 @@
 
 
 /***/ },
-/* 597 */
+/* 598 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var utils = __webpack_require__(584);
+	var utils = __webpack_require__(585);
 
 	/**
 	 * Parse headers into an object
@@ -39936,12 +39944,12 @@
 
 
 /***/ },
-/* 598 */
+/* 599 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var utils = __webpack_require__(584);
+	var utils = __webpack_require__(585);
 
 	module.exports = (
 	  utils.isStandardBrowserEnv() ?
@@ -40010,7 +40018,7 @@
 
 
 /***/ },
-/* 599 */
+/* 600 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -40052,12 +40060,12 @@
 
 
 /***/ },
-/* 600 */
+/* 601 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var utils = __webpack_require__(584);
+	var utils = __webpack_require__(585);
 
 	module.exports = (
 	  utils.isStandardBrowserEnv() ?
@@ -40111,7 +40119,7 @@
 
 
 /***/ },
-/* 601 */
+/* 602 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -40131,7 +40139,7 @@
 
 
 /***/ },
-/* 602 */
+/* 603 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -40149,7 +40157,7 @@
 
 
 /***/ },
-/* 603 */
+/* 604 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -40182,7 +40190,7 @@
 
 
 /***/ },
-/* 604 */
+/* 605 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -40209,11 +40217,11 @@
 
 	var _list2 = _interopRequireDefault(_list);
 
-	var _groupItem = __webpack_require__(605);
+	var _groupItem = __webpack_require__(606);
 
 	var _groupItem2 = _interopRequireDefault(_groupItem);
 
-	var _reddit = __webpack_require__(579);
+	var _reddit = __webpack_require__(580);
 
 	var _reddit2 = _interopRequireDefault(_reddit);
 
@@ -40310,7 +40318,7 @@
 	})(Reddits);
 
 /***/ },
-/* 605 */
+/* 606 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -40384,7 +40392,7 @@
 	exports.default = GroupItem;
 
 /***/ },
-/* 606 */
+/* 607 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -40401,7 +40409,7 @@
 
 	var _reactRouter = __webpack_require__(498);
 
-	var _canvas = __webpack_require__(607);
+	var _canvas = __webpack_require__(608);
 
 	var _canvas2 = _interopRequireDefault(_canvas);
 
@@ -40489,7 +40497,7 @@
 	exports.default = SubSection;
 
 /***/ },
-/* 607 */
+/* 608 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -40508,7 +40516,7 @@
 
 	var _reactRedux = __webpack_require__(468);
 
-	var _d = __webpack_require__(608);
+	var _d = __webpack_require__(609);
 
 	var d3 = _interopRequireWildcard(_d);
 
@@ -40564,7 +40572,7 @@
 	// ) ( LapTimes );
 
 /***/ },
-/* 608 */
+/* 609 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// https://d3js.org Version 4.3.0. Copyright 2016 Mike Bostock.
@@ -56953,7 +56961,7 @@
 
 
 /***/ },
-/* 609 */
+/* 610 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -56980,19 +56988,19 @@
 
 	var _redux = __webpack_require__(475);
 
-	var _index = __webpack_require__(610);
+	var _index = __webpack_require__(611);
 
 	var _index2 = _interopRequireDefault(_index);
 
-	var _reduxThunk = __webpack_require__(613);
+	var _reduxThunk = __webpack_require__(614);
 
 	var _reduxThunk2 = _interopRequireDefault(_reduxThunk);
 
-	var _reduxLogger = __webpack_require__(614);
+	var _reduxLogger = __webpack_require__(615);
 
 	var _reduxLogger2 = _interopRequireDefault(_reduxLogger);
 
-	var _reddit = __webpack_require__(579);
+	var _reddit = __webpack_require__(580);
 
 	var actionReddit = _interopRequireWildcard(_reddit);
 
@@ -57009,7 +57017,7 @@
 	;
 
 /***/ },
-/* 610 */
+/* 611 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -57020,11 +57028,11 @@
 
 	var _redux = __webpack_require__(475);
 
-	var _timer = __webpack_require__(611);
+	var _timer = __webpack_require__(612);
 
 	var _timer2 = _interopRequireDefault(_timer);
 
-	var _reddit = __webpack_require__(612);
+	var _reddit = __webpack_require__(613);
 
 	var _reddit2 = _interopRequireDefault(_reddit);
 
@@ -57036,7 +57044,7 @@
 	});
 
 /***/ },
-/* 611 */
+/* 612 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -57120,7 +57128,7 @@
 	;
 
 /***/ },
-/* 612 */
+/* 613 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -57179,7 +57187,7 @@
 		}
 	};
 
-	var _reddit = __webpack_require__(580);
+	var _reddit = __webpack_require__(581);
 
 	var _reddit2 = _interopRequireDefault(_reddit);
 
@@ -57190,7 +57198,7 @@
 	;
 
 /***/ },
-/* 613 */
+/* 614 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -57218,7 +57226,7 @@
 	exports['default'] = thunk;
 
 /***/ },
-/* 614 */
+/* 615 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -57229,11 +57237,11 @@
 	  value: true
 	});
 
-	var _core = __webpack_require__(615);
+	var _core = __webpack_require__(616);
 
-	var _helpers = __webpack_require__(616);
+	var _helpers = __webpack_require__(617);
 
-	var _defaults = __webpack_require__(619);
+	var _defaults = __webpack_require__(620);
 
 	var _defaults2 = _interopRequireDefault(_defaults);
 
@@ -57336,7 +57344,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 615 */
+/* 616 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -57346,9 +57354,9 @@
 	});
 	exports.printBuffer = printBuffer;
 
-	var _helpers = __webpack_require__(616);
+	var _helpers = __webpack_require__(617);
 
-	var _diff = __webpack_require__(617);
+	var _diff = __webpack_require__(618);
 
 	var _diff2 = _interopRequireDefault(_diff);
 
@@ -57477,7 +57485,7 @@
 	}
 
 /***/ },
-/* 616 */
+/* 617 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -57501,7 +57509,7 @@
 	var timer = exports.timer = typeof performance !== "undefined" && performance !== null && typeof performance.now === "function" ? performance : Date;
 
 /***/ },
-/* 617 */
+/* 618 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -57511,7 +57519,7 @@
 	});
 	exports.default = diffLogger;
 
-	var _deepDiff = __webpack_require__(618);
+	var _deepDiff = __webpack_require__(619);
 
 	var _deepDiff2 = _interopRequireDefault(_deepDiff);
 
@@ -57597,7 +57605,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 618 */
+/* 619 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/* WEBPACK VAR INJECTION */(function(global) {/*!
@@ -58026,7 +58034,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }())))
 
 /***/ },
-/* 619 */
+/* 620 */
 /***/ function(module, exports) {
 
 	"use strict";
