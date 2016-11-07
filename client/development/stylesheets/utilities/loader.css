@@ -1,0 +1,25 @@
+
+.loader {
+	min-height 	: 200px;
+	position 	: relative;
+}
+
+.loader__signal {
+	background 	: 0 0 url( '/images/presentation/loader-small.gif' ) no-repeat;
+	height 		: 32px;
+	left 		: 50%;
+	margin 		: -16px 0 0 -16px;
+	position 	: absolute;
+	overflow 	: hidden;
+	top 		: 30%;
+	width 		: 32px;
+}
+
+.loader__body {
+	transition 	: opacity , 0.25s , ease-in-out;
+}
+
+.loader__body--loading {
+	cursor 	: wait;
+	opacity : 0.4;
+}

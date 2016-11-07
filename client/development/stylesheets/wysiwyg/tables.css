@@ -1,0 +1,64 @@
+
+@import '../configuration/variables';
+
+caption {
+	color 		: color( var( --color-body ) shade( 10% ));
+	font-size 	: 21px;
+	margin 		: 0 0 5px;
+	text-align 	: left;
+}
+
+table {
+	border-collapse : collapse;
+	border-top 		: 1px solid color( var( --color-body ) lightness( 75% ));
+	border-left 	: 1px solid color( var( --color-body ) lightness( 75% ));
+	border-spacing 	: 0;
+	margin 			: 0 0 15px;
+	table-layout 	: fixed;
+	width 			: 100%;
+}
+
+td ,
+th {
+	border-right 	: 1px solid color( var( --color-body ) lightness( 75% ));
+	border-bottom 	: 1px solid color( var( --color-body ) lightness( 75% ));
+	display 		: list-item;
+	list-style 		: none;
+	padding 		: 8px 10px 10px;
+	text-align 		: left;
+
+	@media ( --mobile-landscape ) {
+		display 	: table-cell;
+	}
+}
+
+th {
+	background 	: color( var( --color-body ) lightness( 95% ));
+	font-weight : 400;
+}
+
+/*tbody ,
+tfoot {
+	
+	& td {
+		background : none;
+	}
+}
+
+thead {
+
+	& td {
+		border-bottom-color : color( var( --color-body ) lightness( 75% ));
+	}
+}
+
+tbody {
+
+	& tr {
+		transition : background , 0.25s , ease-in-out;
+
+		&:nth-child( 2n ) {
+			background : color( var( --color-body ) lightness( 90% ));
+		}
+	}
+}*/

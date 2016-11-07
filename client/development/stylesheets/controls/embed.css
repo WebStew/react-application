@@ -1,0 +1,113 @@
+
+@import '../configuration/variables';
+
+audio 		,
+canvas 		,
+iframe 		,
+meter 		,
+progress 	,
+video {
+	margin 	: 0 0 15px;
+	widows 	: 100%;
+}
+
+canvas 	,
+iframe 	,
+meter 	,
+progress {
+	background 		: color( var( --color-body ) lightness( 95% ));
+	border-radius 	: 3px;
+	box-shadow 		: 0 0 3px color( var( --color-body ) lightness( 75% )) inset;
+}
+
+canvas ,
+iframe {
+	border : 1px solid color( var( --color-body ) lightness( 75% ));
+}
+
+iframe {
+	overflow : hidden;
+}
+
+meter ,
+progress {
+	appearance 	: none;
+	border      : none;
+	display     : block;
+	font-size   : 10px;
+	height      : 17px;
+	text-align  : center;
+}
+
+meter {
+
+	&::meter-bar {
+		background      : color( var( --color-body ) lightness( 75% ));
+		border          : 1px solid color( var( --color-body ) lightness( 65% ));
+		border-radius   : 3px;
+		box-shadow      : 0 0 2px color( var( --color-body ) lightness( 65% )) inset;
+	}
+
+	&::meter-optimum-value,
+	&::meter-suboptimum-value,
+	&::meter-even-less-good-value {
+		border-radius: 3px;
+	}
+
+	&::meter-optimum-value {
+		background-image : linear-gradient( 
+			to bottom 				, 
+			var( --color-valid ) 	, 
+			color( var( --color-valid ) shade( 20% ))
+		); 
+	}
+
+	&::meter-suboptimum-value {
+		background-image : linear-gradient( 
+			to bottom 				, 
+			var( --color-warning ) , 
+			color( var( --color-warning ) shade( 20% ))
+		); 
+	}
+
+	&::meter-even-less-good-value  {
+		background-image : linear-gradient( 
+			to bottom 				, 
+			var( --color-error ) 	, 
+			color( var( --color-error ) shade( 20% ))
+		); 
+	}
+}
+
+progress{
+
+	&::progress-bar {
+		background      : color( var( --color-body ) lightness( 75% ));
+		border          : 1px solid color( var( --color-body ) lightness( 65% ));
+		border-radius   : 3px;
+		box-shadow      : 0 0 2px color( var( --color-body ) lightness( 65% )) inset;
+	}
+
+	&::progress-value {
+		border-radius   : 3px;
+		background-image : linear-gradient( 
+			to bottom 				, 
+			var( --color-action ) 	, 
+			color( var( --color-action ) shade( 20% ))
+		); 
+	}
+}
+
+svg {
+	margin: 0 0 15px;
+}
+
+video {
+	background 	: color( var( --color-body ) lightness( 95% ));
+	border 		: 1ps solid color( var( --color-body ) lightness( 75% ));
+	transition 	: background , 0.25s , ease-in-out;
+
+	&:--enter {
+		background: color( var( --color-body ) lightness( 85% ));
+	}
+}

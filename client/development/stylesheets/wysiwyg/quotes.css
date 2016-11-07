@@ -1,0 +1,50 @@
+
+@import '../configuration/variables';
+
+blockquote 	,
+cite 		,
+q {
+	font-family : var( --font-family-quote );
+	font-style  : italic;
+}
+
+blockquote {
+	background 		: color( var( --color-body ) lightness( 95% ));
+	border-bottom 	: 1px solid color( var( --color-body) lightness( 75% ));
+	border-left 	: 3px solid color( var( --color-body) lightness( 75% ));
+	border-right 	: 1px solid color( var( --color-body) lightness( 75% ));
+	border-top 		: 1px solid color( var( --color-body) lightness( 75% ));
+	border-radius 	: 3px;
+	box-shadow 		: 0 0 3px color( var( --color-body) lightness( 85% )) inset;
+	color 			: lighten( $color-body, 15 );
+	margin 			: 0 20px 15px;
+	padding 		: 20px 20px 15px;
+	quotes 			: none;
+
+	&:after ,
+	&:before {
+		content : '';
+		content : none;
+	}
+
+	& p {
+		margin  : 0 0 5px;
+	}
+
+	& cite {
+		font-size 	: 12px;
+		font-style 	: normal;
+	}
+}
+
+q {
+	quotes : '\201C''\201D''\2018''\2019';
+
+	&:before {
+		content : open-quote;
+	}
+
+	&:after {
+		content : close-quote;
+	}
+}

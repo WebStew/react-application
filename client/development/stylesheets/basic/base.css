@@ -1,20 +1,9 @@
 
 @import '../configuration/variables';
 
-a {
-	display : flex;
-	color : var(--color-action);
-}
-
-/*::selection {
-	background 	: var( --color-highlight 	);
-	color 		: var( --color-body 		);
-	text-shadow : none;
-}
-
-::-moz-selection {
-	background 	: var( --color-highlight 	);
-	color 		: var( --color-body 		);
+::selection {
+	background 	: color( var( --color-highlight ) lightness( 80% ));
+	color 		: color( var( --color-body ) shade( 10% ));
 	text-shadow : none;
 }
 
@@ -26,11 +15,11 @@ body {
 	line-height	: 1.4;
 	padding 	: 10px 20px;
 
-	/*@include media( mobile-landscape ) {
+	@media ( --mobile-landscape ) {
 		line-height : 1.6;
 		padding 	: 20px 40px;
-	}*/
-/*}
+	}
+}
 
 hr {
 	display 	: block;
@@ -44,4 +33,4 @@ hr {
 html {
 	height 		: 100%;
 	overflow-y 	: scroll;
-}*/
+}

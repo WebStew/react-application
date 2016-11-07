@@ -1,0 +1,90 @@
+
+@import '../configuration/variables';
+
+abbr[ title ] ,
+dfn[ title ] {
+	border-bottom 	: 1px dotted var( --color-body );
+	cursor 			: help;
+	text-decoration : none;
+}
+
+del {
+	opacity 		: 0.4;
+	text-decoration : line-through;
+}
+
+em ,
+i {
+	font-style : italic;
+}
+
+ins {
+	background 		: color( var( --color-highlight ) lightness( 80% ));
+	color 			: color( var( --color-body ) shade( 10% ));
+	padding 		: 0 2px;
+	text-decoration : none;
+}
+
+mark {
+	background 		: color( var( --color-highlight ) lightness( 80% ));
+	color 			: color( var( --color-body ) shade( 10% ));
+	font-style 	: italic;
+	font-weight : 700;
+	padding 	: 0 5px;
+}
+
+p {
+	font-size 	: 14px;
+	margin 		: 0 0 15px;
+}
+
+strong ,
+b {
+	color 		: color( var( --color-body ) shade( 10% ));
+	font-weight : 700;
+}
+
+s {
+	text-decoration : line-through;
+}
+
+small {
+	font-size : 12px;
+}
+
+sub ,
+sup {
+	font-size 	: 10px;
+	position 	: relative;
+	padding 	: 0 2px;
+}
+
+sub {
+	bottom : -5px;
+}
+
+sup {
+	top : -5px;
+}
+
+time {
+	font-family : var( --font-family-code );
+	font-size 	: 12px;
+}
+
+u {
+	color 					: var( --color-body );
+	text-decoration-style 	: wavy;
+}
+
+.align--center {
+	text-align : center;
+}
+
+.align--right {
+	text-align : right;
+}
+
+.align--justify {
+	text-align : justify;
+}

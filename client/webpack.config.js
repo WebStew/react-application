@@ -1,8 +1,4 @@
 
-
-var Extractor = require ( 'extract-text-webpack-plugin' );
-//var webpack = require ( 'webpack' );
-
 var configuration 	= {
 		output 		: require ( './configuration/build/output' 				) ,
 		resolver 	: require ( './configuration/build/module-resolver' 	)

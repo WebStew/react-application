@@ -1,0 +1,65 @@
+
+@import '../configuration/variables';
+
+figure {
+	display 	: inline-block;
+	margin 		: 0 0 15px;
+	position 	: relative;
+	width 		: 100%;
+
+	@media ( --mobile-portrait ) {
+		width : auto;
+	}
+
+	& img {
+		float 	: left;
+		height 	: auto;
+		margin 	: 0;
+		width 	: 100%;
+
+		@media ( --mobile-portrait ) {
+			width : auto;
+		}
+	}
+}
+
+figcaption {
+	background 	: rgba( 0, 0, 0, 0.8 );
+	bottom 		: 0;
+	color 		: color( var( --color-body ) lightness( 95% ));
+	padding 	: 3px 5px 5px;
+	position 	: absolute;
+	width 		: 100%;
+}
+
+img {
+	background 	: color( var( --color-body ) lightness( 95% ));
+	border 		: 1px solid color( var( --color-body ) lightness( 75% ));
+	margin 		: 0 0 15px;
+}
+
+.img {
+	height 		: auto;
+	transition 	: width , 0.25s , ease-in-out;
+	width 		: 100%;
+
+	@media ( --mobile-portrait ) {
+		width : auto;
+	}
+}
+
+.img--left {
+
+	@media ( --mobile-portrait ) {
+		float 	: left;
+		margin 	: 5px 15px 15px 0;
+	}
+}
+
+.img--right {
+
+	@media ( --mobile-portrait ) {
+		float 	: right;
+		margin 	: 5px 0 15px 15px;
+	}
+}

@@ -1,0 +1,29 @@
+
+@import '../configuration/variables';
+
+a {
+	border-bottom 				: 1px solid transparent;
+	color 						: var( --color-action );
+	cursor 						: pointer;
+	text-decoration 			: none;
+	transition-duration 		: 0.25s;
+	transition-property 		: border , color;
+	transition-timing-function 	: ease-in-out;
+
+	&:visited {
+		color 		: color( var( --color-actioned ) shade( 25% ));
+	}
+
+	&:--enter {
+		border-bottom 	: 1px solid color( var( --color-action ) shade( 25% ));
+		color 			: color( var( --color-action ) shade( 25% ));
+		text-decoration : none;
+	}
+}
+
+.link--skip {
+
+	&:focus {
+		position : static;
+	}
+}

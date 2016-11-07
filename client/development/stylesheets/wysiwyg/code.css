@@ -1,0 +1,56 @@
+
+@import '../configuration/variables';
+
+code 	,
+kbd 	,
+samp 	,
+var {
+	font-family : var( --font-family-code );
+}
+
+code {
+	background  : color( var( --color-body ) lightness( 95% ));
+	border 		: 1px solid color( var( --color-body ) lightness( 75% ));
+	color 		: var( --color-error );
+	padding 	: 2px 5px;
+}
+
+pre {
+
+	& code {
+		background 	: none;
+		border 		: none;
+		color 		: color( var( --color-body ) lightness( 15% ));
+		padding 	: 0;
+	}
+}
+
+kbd {
+	background 		: var( --color-body );
+	color 			: #fff;
+	border-radius 	: 3px;
+	padding 		: 0 4px;
+}
+
+pre {
+	background 		: color( var( --color-body ) lightness( 95% ));
+	border 			: 1px solid color( var( --color-body ) lightness( 75% ));
+	border-radius 	: 3px;
+	box-shadow 		: 0 0 3px color( var( --color-body ) lightness( 75% )) inset;
+	color 			: color( var( --color-body ) lightness( 15% ));
+	margin 			: 0 0 15px;
+	padding 		: 8px 10px;
+	white-space 	: normal;
+
+	@media ( --mobile-landscape ) {
+		white-space : pre;
+	}
+}
+
+samp {
+	text-decoration-style : wavy;
+}
+
+var {
+	font-style : normal;
+}

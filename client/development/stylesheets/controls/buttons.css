@@ -1,0 +1,195 @@
+
+@import '../configuration/variables';
+
+.button {
+	background-image 			: linear-gradient( 
+		to bottom 										, 
+		color( var( --color-body ) lightness( 75% )) 	, 
+		color( var( --color-body ) lightness( 55% ))
+	); 
+	border 						: 1px solid color( var( --color-body ) lightness( 45% ));
+	border-radius 				: 3px;
+	box-shadow 					: 0 0 3px 	color( var( --color-body ) lightness( 50% ));
+	color 						: var( --color-body );
+	cursor 						: pointer;
+	display 					: inline-block;
+	font-family 				: var( --font-family-body 	);
+	font-size 					: var( --font-size-body 	);
+	line-height 				: 1;
+	margin 						: 0 0 10px;
+	padding 					: 7px 15px;
+	text-align 					: center;
+	text-decoration 			: none;
+	transition-duration 		: 0.25s;
+	transition-timing-function 	: ease-in-out;
+	transition-property 		: border , box-shadow , color , width;
+	white-space 				: nowrap;
+	width 						: 100%;
+	vertical-align 				: middle;
+
+	@media ( --mobile-landscape ) {
+		margin 	: 0 5px 10px 0;
+		width 	: auto;
+	}
+
+	&::focus-inner {
+		border 	: 0;
+		padding : 0 0 2px;
+	}
+
+	&:visited {
+		color : var( --color-body );
+	}
+
+	&:--enter {
+		background-image 	: linear-gradient( 
+			to bottom 										, 
+			color( var( --color-body ) lightness( 50% )) 	, 
+			color( var( --color-body ) lightness( 50% ))
+		);
+		border 				: 1px solid color( var( --color-body ) lightness( 30% ));
+		box-shadow  		: 0 0 3px 	color( var( --color-body ) lightness( 30% )) inset;
+		color 				: var( --color-body );
+	}
+}
+
+.button--action 	,
+.button--actioned 	,
+.button--error 		,
+.button--valid 		,
+.button--warning {
+	color : #fff;
+
+	&:visited,
+	&:--enter {
+		color : #fff;
+	}
+}
+
+.button--action {
+	background-image 	: linear-gradient( 
+		to bottom 				, 
+		var( --color-action ) 	, 
+		color( var( --color-action ) shade( 20% ))
+	);
+	border 				: 1px solid color( var( --color-action ) shade( 25% ));
+	box-shadow 			: 0 0 3px 	color( var( --color-action ) shade( 25% ));
+
+	&:--enter {
+		background-image 	: linear-gradient( 
+			to bottom 									, 
+			color( var( --color-action ) shade( 25% )) 	, 
+			color( var( --color-action ) shade( 25% ))
+		);
+		border 				: 1px solid color( var( --color-action ) shade( 30% ));
+		box-shadow 			: 0 0 3px 	color( var( --color-action ) shade( 30% )) inset;
+	}
+}
+
+.button--actioned {
+	background-image 	: linear-gradient( 
+		to bottom 				, 
+		var( --color-actioned ) , 
+		color( var( --color-actioned ) shade( 20% ))
+	);
+	border 			: 1px solid color( var( --color-actioned ) shade( 25% ));
+	box-shadow 		: 0 0 3px 	color( var( --color-actioned ) shade( 25% ));
+
+	&:--enter {
+		background-image 	: linear-gradient( 
+			to bottom 										, 
+			color( var( --color-actioned ) shade( 25% )) 	,
+			color( var( --color-actioned ) shade( 25% ))
+		);
+		border 				: 1px solid color( var( --color-actioned ) shade( 30% ));
+		box-shadow 			: 0 0 3px 	color( var( --color-actioned ) shade( 30% )) inset;
+	}
+}
+
+.button--error {
+	background-image 	: linear-gradient( 
+		to bottom 				, 
+		var( --color-error ) 	,
+		color( var( --color-error ) shade( 20% ))
+	);
+	border          : 1px solid color( var( --color-error ) shade( 20% ));
+	box-shadow      : 0 0 3px 	color( var( --color-error ) shade( 20% ));
+
+	&:--enter {
+		background-image 	: linear-gradient( 
+			to bottom 									, 
+			color( var( --color-error ) shade( 20% )) 	,
+			color( var( --color-error ) shade( 20% ))
+		);
+		border 				: 1px solid color( var( --color-error ) shade( 30% ));
+		box-shadow 			: 0 0 3px 	color( var( --color-error ) shade( 30% )) inset;
+	}
+}
+
+.button--valid {
+	background-image 	: linear-gradient( 
+		to bottom 				, 
+		var( --color-valid ) 	,
+		color( var( --color-valid ) shade( 20% ))
+	);
+	border 				: 1px solid color( var( --color-valid ) shade( 20% ));
+	box-shadow 			: 0 0 3px 	color( var( --color-valid ) shade( 20% ));
+
+	&:--enter {
+		background-image 	: linear-gradient( 
+			to bottom 									, 
+			color( var( --color-valid ) shade( 20% )) 	, 
+			color( var( --color-valid ) shade( 20% ))
+		);
+		border 		: 1px solid color( var( --color-valid ) shade( 30% ));
+		box-shadow 	: 0 0 3px 	color( var( --color-valid ) shade( 30% )) inset;
+	}
+}
+
+.button--warning {
+	background-image 	: linear-gradient( 
+		to bottom 				, 
+		var( --color-warning ) 	,
+		color( var( --color-warning ) shade( 20% ))
+	);
+	border 			: 1px solid color( var( --color-warning ) shade( 20% ));
+	box-shadow 		: 0 0 3px 	color( var( --color-warning ) shade( 20% ));
+
+	&:--enter {
+		background-image 	: linear-gradient( 
+			to bottom 									, 
+			color( var( --color-warning ) shade( 20% )) ,
+			color( var( --color-warning ) shade( 20% ))
+		);
+		border 		: 1px solid color( var( --color-warning ) shade( 30 ));
+		box-shadow 	: 0 0 3px 	color( var( --color-warning ) shade( 30 )) inset;
+	}
+}
+
+.button--link 		,
+.button--link:hover ,
+.button--link:focus {
+	background 		: none;
+	border-color 	: transparent;
+	box-shadow 		: none;
+}
+
+.button--link {
+	color 			: var( --color-action );
+	text-decoration : underline;
+
+	&:visited {
+		color 		: color( var( --color-actioned ) shade( 25% ));
+	}
+
+	&:--enter {
+		color 			: color( var( --color-action ) shade( 25% ));
+		text-decoration : none;
+	}
+}
+
+.button--disabled {
+	cursor 			: text;
+	opacity 		: 0.4;
+	pointer-events 	: none;
+}
