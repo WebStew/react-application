@@ -44,9 +44,9 @@ node_modules
 
 # Build specific   #
 ####################
-public/*.css
-public/*.js
-public/*.gif
+client/public/*.css
+client/public/*.js
+client/public/*.gif
 
 # IIS #
 ####################
