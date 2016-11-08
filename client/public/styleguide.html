@@ -12,9 +12,9 @@
 
 	<link rel="stylesheet" href="/application.css">
 </head>
-<body>
-	<header id="demonstration-header" role="banner">
-		<nav role="navigation">
+<body id="document">
+	<header id="document__header">
+		<nav aria-label="article section navigation">
 			<ol>
 				<li><a href="#links">Links</a></li>
 				<li><a href="#headings">Headings</a></li>
@@ -32,8 +32,8 @@
 		</nav>
 		<h1>Style Guide <small>HTML5</small></h1>
 	</header>
-	<main role="main">
-		<article id="demonstration-body">
+	<main id="document__body">
+		<article>
 			<section id="headings">
 				<h2>Headings</h2>
 				<h1>Heading 1</h1>
@@ -42,18 +42,19 @@
 				<h4>Heading 4</h4>
 				<h5>Heading 5</h5>
 				<h6>Heading 6</h6>
-				<nav class="align--right">
-					<a href="#demonstration-header">Back to top</a>
+				<nav class="align--right" aria-label="page navigation">
+					<a href="#document">Back to top</a>
 				</nav>
 			</section>
 			<section id="links">
+				<h2>Links</h2>
 				<p><a href="#">This is a text link</a>. <br>
 					This is a link to a document in another language <a href="#" hreflang="fr">tranlate to french</a>. <br>
 					This is a link in another language <a href="#" lang="de">das goed</a>. <br>
-					<nav class="align--right">
-						<a href="#demonstration-header">Back to top</a>
-					</nav>
 				</p>
+				<nav class="align--right" aria-label="page navigation">
+					<a href="#document">Back to top</a>
+				</nav>
 			</section>
 			<section id="wysiwyg">
 				<h2><abbr title="What You See Is What You Get">WYSIWYG</abbr></h2>
@@ -75,8 +76,8 @@
 					The time element: <time datetime="1905-11-13">13 November 1905</time>.
 				</p>
 				<hr>
-				<nav class="align--right">
-					<a href="#demonstration-header">Back to top</a>
+				<nav class="align--right" aria-label="page navigation">
+					<a href="#document">Back to top</a>
 				</nav>
 			</section>
 			<section id="quotations">
@@ -84,17 +85,17 @@
 				<p>Example of the <a href="http://thenewcode.com/4/In-Other-Words-Using-the-blockquote-cite-and-q-elements">correct usuage of quotations</a>.</p>
 				<h3>Blockquotes</h3>
 				<p>A blockquote contains an extended quotation as a block element.</p>
-				<blockquote cite="{{http://www.cited-by.com}}">
+				<blockquote cite="http://www.cited-by.com">
 					<p>A block quotation (also known as a long quotation or extract) is a quotation in a written document, that is set off from the main text as a paragraph, or block of text.</p>
 					<p>It is typically distinguished visually using indentation and a different typeface or smaller size quotation. It may or may not include a citation, usually placed at the bottom.</p>
-					<cite><a href="{{http://www.cited-by.com}}">{{Cited By}}</a></cite>
+					<cite><a href="http://www.cited-by.com">{{Cited By}}</a></cite>
 				</blockquote>
 				<h3>Quotes</h3>
 				<p>Intended for a short, inline quotation that does not require a line break. <q cite="https://developer.mozilla.org/en-US/docs/HTML/Element/q">This text is a short inline quotation. <q cite="https://developer.mozilla.org/en-US/docs/HTML/Element/q">With a nested quote within</q></q></p>
 				<h3>Cite</h3>
 				<p>Cite always contains the name of a work like <cite>CSS for Dummies</cite>.</p>
-				<nav class="align--right">
-					<a href="#demonstration-header">Back to top</a>
+				<nav class="align--right" aria-label="page navigation">
+					<a href="#document">Back to top</a>
 				</nav>
 			</section>
 			<section id="lists">
@@ -119,15 +120,15 @@
 					<li>List Item 3</li>
 				</ul>
 				<h3>Navigation</h3>
-				<nav role="navigation">
+				<nav>
 					<ul>
 						<li><a href="#">Navigation 1</a></li>
 						<li><a href="#">Navigation 2</a></li>
 						<li><a href="#">Navigation 3</a></li>
 					</ul>
 				</nav>
-				<nav class="align--right">
-					<a href="#demonstration-header">Back to top</a>
+				<nav class="align--right" aria-label="page navigation">
+					<a href="#document">Back to top</a>
 				</nav>
 			</section>
 			<section id="tables">
@@ -205,8 +206,8 @@
 						</tr>
 					</tbody>
 				</table>
-				<nav class="align--right">
-					<a href="#demonstration-header">Back to top</a>
+				<nav class="align--right" aria-label="page navigation">
+					<a href="#document">Back to top</a>
 				</nav>
 			</section>
 			<section id="code">
@@ -226,8 +227,8 @@ p q r s t u v w x y z { | } ~ </pre>
 	...
 	}
 };</code></pre>
-				<nav class="align--right">
-					<a href="#demonstration-header">Back to top</a>
+				<nav class="align--right" aria-label="page navigation">
+					<a href="#document">Back to top</a>
 				</nav>
 			</section>
 			<section id="images">
@@ -255,8 +256,8 @@ p q r s t u v w x y z { | } ~ </pre>
 					<img src="http://dummyimage.com/200x200/f2f2f2/4e342e.png" alt="Image alt text" height="200" width="200">
 					<figcaption>Here is a caption for this image.</figcaption>
 				</figure>
-				<nav class="align--right">
-					<a href="#demonstration-header">Back to top</a>
+				<nav class="align--right" aria-label="page navigation">
+					<a href="#document">Back to top</a>
 				</nav>
 			</section>
 			<section id="state">
@@ -271,8 +272,8 @@ p q r s t u v w x y z { | } ~ </pre>
 						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum, perspiciatis sed similique odio consequuntur nemo quis corporis qui aperiam optio adipisci, velit quaerat totam, laborum repellendus fugiat veritatis libero modi. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus, voluptatibus mollitia itaque amet.</p>
 					</div>
 				</div>
-				<nav class="align--right">
-					<a href="#demonstration-header">Back to top</a>
+				<nav class="align--right" aria-label="page navigation">
+					<a href="#document">Back to top</a>
 				</nav>
 			</section>
 			<section id="forms">
@@ -560,8 +561,8 @@ p q r s t u v w x y z { | } ~ </pre>
 						</div>
 					</fieldset>
 				</form>
-				<nav class="align--right">
-					<a href="#demonstration-header">Back to top</a>
+				<nav class="align--right" aria-label="page navigation">
+					<a href="#document">Back to top</a>
 				</nav>
 			</section>
 			<section id="embedded">
@@ -584,19 +585,19 @@ p q r s t u v w x y z { | } ~ </pre>
 					<circle cx="100" cy="100" r="100" fill="#f2f2f2" stroke="#d9d9d9" stroke-width="1"></circle>
 				</svg>
 				<h3>Iframe</h3>
-				<iframe src="" height="300" width="300">
+				<iframe src="#" height="300" width="300">
 					<p>Apologies, your browser does not support iframes.</p>
 				</iframe>
-				<nav class="align--right">
-					<a href="#demonstration-header">Back to top</a>
+				<nav class="align--right" aria-label="page navigation">
+					<a href="#document">Back to top</a>
 				</nav>
 			</section>
 		</article>
-		<aside role="complementary">
+		<aside id="document__aside">
 			<p>Secondary content within <code>&lt;div&gt;aside&lt;/div&gt;</code>.</p>
 		</aside>
 	</main>
-	<footer role="contentinfo">
+	<footer id="document__footer">
 		<p><small>Footer content within <code>&lt;div&gt;footer&lt;/div&gt;</code>.</small></p>
 	</footer>
 </body>

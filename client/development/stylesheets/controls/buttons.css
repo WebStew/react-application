@@ -4,12 +4,12 @@
 .button {
 	background-image 			: linear-gradient( 
 		to bottom 										, 
-		color( var( --color-body ) lightness( 75% )) 	, 
-		color( var( --color-body ) lightness( 55% ))
+		color( var( --color-body ) lightness( 95% )) 	, 
+		color( var( --color-body ) lightness( 75% ))
 	); 
-	border 						: 1px solid color( var( --color-body ) lightness( 45% ));
+	border 						: 1px solid color( var( --color-body ) lightness( 75% ));
 	border-radius 				: 3px;
-	box-shadow 					: 0 0 3px 	color( var( --color-body ) lightness( 50% ));
+	box-shadow 					: 0 0 3px 	color( var( --color-body ) lightness( 75% ));
 	color 						: var( --color-body );
 	cursor 						: pointer;
 	display 					: inline-block;
@@ -44,11 +44,11 @@
 	&:--enter {
 		background-image 	: linear-gradient( 
 			to bottom 										, 
-			color( var( --color-body ) lightness( 50% )) 	, 
-			color( var( --color-body ) lightness( 50% ))
+			color( var( --color-body ) lightness( 75% )) 	, 
+			color( var( --color-body ) lightness( 75% ))
 		);
-		border 				: 1px solid color( var( --color-body ) lightness( 30% ));
-		box-shadow  		: 0 0 3px 	color( var( --color-body ) lightness( 30% )) inset;
+		border 				: 1px solid color( var( --color-body ) lightness( 50% ));
+		box-shadow  		: 0 0 3px 	color( var( --color-body ) lightness( 50% )) inset;
 		color 				: var( --color-body );
 	}
 }

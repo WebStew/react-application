@@ -33,32 +33,34 @@ th {
 }
 
 th {
-	background 	: color( var( --color-body ) lightness( 95% ));
+	background 	: color( var( --color-body ) lightness( 90% ));
 	font-weight : 400;
 }
 
-/*tbody ,
+tbody ,
 tfoot {
 	
-	& td {
+	& td ,
+	& th {
 		background : none;
 	}
 }
 
 thead {
 
-	& td {
-		border-bottom-color : color( var( --color-body ) lightness( 75% ));
+	& th {
+		border-bottom-color : color( var( --color-body ) lightness( 65% ));
 	}
 }
 
-tbody {
+tr {
+	transition : background , 0.25s , ease-in-out;
 
-	& tr {
-		transition : background , 0.25s , ease-in-out;
-
-		&:nth-child( 2n ) {
-			background : color( var( --color-body ) lightness( 90% ));
-		}
+	&:nth-child( 2n ) {
+		background : color( var( --color-body ) lightness( 90% ));
 	}
-}*/
+
+	&:hover {
+		background : color( var( --color-action ) lightness( 95% ));
+	}
+}

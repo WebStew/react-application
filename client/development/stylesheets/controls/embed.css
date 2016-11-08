@@ -8,7 +8,7 @@ meter 		,
 progress 	,
 video {
 	margin 	: 0 0 15px;
-	widows 	: 100%;
+	width 	: 100%;
 }
 
 canvas 	,
@@ -31,7 +31,6 @@ iframe {
 
 meter ,
 progress {
-	appearance 	: none;
 	border      : none;
 	display     : block;
 	font-size   : 10px;
@@ -41,20 +40,20 @@ progress {
 
 meter {
 
-	&::meter-bar {
-		background      : color( var( --color-body ) lightness( 75% ));
-		border          : 1px solid color( var( --color-body ) lightness( 65% ));
-		border-radius   : 3px;
-		box-shadow      : 0 0 2px color( var( --color-body ) lightness( 65% )) inset;
+	&::-webkit-meter-bar {
+		background 		: color( var( --color-body ) lightness( 95% ));
+		border 			: none;
+		border-radius 	: 3px;
+		box-shadow 		: 0 0 3px color( var( --color-body ) lightness( 75% )) inset;
 	}
 
-	&::meter-optimum-value,
-	&::meter-suboptimum-value,
-	&::meter-even-less-good-value {
-		border-radius: 3px;
+	&::-webkit-meter-optimum-value,
+	&::-webkit-meter-suboptimum-value,
+	&::-webkit-meter-even-less-good-value {
+		border-radius : 3px;
 	}
 
-	&::meter-optimum-value {
+	&::-webkit-meter-optimum-value {
 		background-image : linear-gradient( 
 			to bottom 				, 
 			var( --color-valid ) 	, 
@@ -62,7 +61,7 @@ meter {
 		); 
 	}
 
-	&::meter-suboptimum-value {
+	&::-webkit-meter-suboptimum-value {
 		background-image : linear-gradient( 
 			to bottom 				, 
 			var( --color-warning ) , 
@@ -70,7 +69,44 @@ meter {
 		); 
 	}
 
-	&::meter-even-less-good-value  {
+	&::-webkit-meter-even-less-good-value  {
+		background-image : linear-gradient( 
+			to bottom 				, 
+			var( --color-error ) 	, 
+			color( var( --color-error ) shade( 20% ))
+		); 
+	}
+
+	&::-moz-meter-bar {
+		background 		: color( var( --color-body ) lightness( 95% ));
+		border 			: none;
+		border-radius 	: 3px;
+		box-shadow 		: 0 0 3px color( var( --color-body ) lightness( 75% )) inset;
+	}
+
+	&:-moz-meter-optimum::-moz-meter-bar ,
+	&:-moz-meter-sub-optimum::-moz-meter-bar ,
+	&:-moz-meter-sub-sub-optimum::-moz-meter-bar {
+		border-radius : 3px;
+	}
+
+	&:-moz-meter-optimum::-moz-meter-bar {
+		background-image : linear-gradient( 
+			to bottom 				, 
+			var( --color-valid ) 	, 
+			color( var( --color-valid ) shade( 20% ))
+		); 
+	}
+
+	&:-moz-meter-sub-optimum::-moz-meter-bar {
+		background-image : linear-gradient( 
+			to bottom 				, 
+			var( --color-warning ) , 
+			color( var( --color-warning ) shade( 20% ))
+		); 
+	}
+
+	&:-moz-meter-sub-sub-optimum::-moz-meter-bar {
 		background-image : linear-gradient( 
 			to bottom 				, 
 			var( --color-error ) 	, 
@@ -79,22 +115,33 @@ meter {
 	}
 }
 
-progress{
+progress {
 
-	&::progress-bar {
-		background      : color( var( --color-body ) lightness( 75% ));
-		border          : 1px solid color( var( --color-body ) lightness( 65% ));
-		border-radius   : 3px;
-		box-shadow      : 0 0 2px color( var( --color-body ) lightness( 65% )) inset;
+	&::-webkit-progress-bar {
+		background 		: color( var( --color-body ) lightness( 95% ));
+		border 			: none;
+		border-radius 	: 3px;
+		box-shadow 		: 0 0 2px color( var( --color-body ) lightness( 75% )) inset;
 	}
 
-	&::progress-value {
-		border-radius   : 3px;
-		background-image : linear-gradient( 
+	&::-webkit-progress-value {
+		border-radius 		: 3px;
+		background-image 	: linear-gradient( 
 			to bottom 				, 
 			var( --color-action ) 	, 
 			color( var( --color-action ) shade( 20% ))
-		); 
+		);  
+	}
+	    
+	&::-moz-progress-bar {
+		border-radius 		: 3px;
+		border 				: none;
+		background-image 	: linear-gradient( 
+			to bottom 				, 
+			var( --color-action ) 	, 
+			color( var( --color-action ) shade( 20% ))
+		);  
+		box-shadow 			: 0 0 2px color( var( --color-body ) lightness( 75% )) inset;
 	}
 }
 
