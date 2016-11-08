@@ -18,6 +18,10 @@ var configuration 	= {
 	plugins 		= {
 		extractor 	: require ( './configuration/build/plugin-extractor' 	) ,
 		postcss 	: require ( './configuration/build/plugin-postcss' 		)
+	} ,
+	
+	servers 		= {
+		development : require ( './configuration/build/server-development' 	)
 	};
 
 module.exports 		= {
@@ -25,6 +29,9 @@ module.exports 		= {
 		application : filesystem.directories.application + '/' + filesystem.files.index
 	} ,
 	output			: configuration.output 		,
+
+	devServer 		: servers.development 		,
+
 	resolve			: configuration.resolver 	,
 	module			: {
 		loaders 	: [

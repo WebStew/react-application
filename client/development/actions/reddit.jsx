@@ -36,8 +36,6 @@ export default {
 
 	fetch ( value ) {
 
-		console.log ( 'FEATCHING' );
-
 		return function ( dispatch ) {
 
 			dispatch ( request ( value ));
