@@ -11,6 +11,7 @@ var configuration 	= {
 
 	loaders 		= {
 		css 		: require ( './configuration/build/loader-css' 			) ,
+		file 		: require ( './configuration/build/loader-file' 		) ,
 		jsx 		: require ( './configuration/build/loader-jsx' 			)
 	} ,
 
@@ -27,7 +28,8 @@ module.exports 		= {
 	resolve			: configuration.resolver 	,
 	module			: {
 		loaders 	: [
-			loaders.css ,
+			loaders.css 	,
+			loaders.file 	,
 			loaders.jsx
 		]
 	} ,
