@@ -40,9 +40,7 @@ web.config
 
 # Project specific #
 ####################
-bower_components
 node_modules
-bower-components
 
 # Build specific   #
 ####################
