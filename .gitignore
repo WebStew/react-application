@@ -1,4 +1,19 @@
 
+# Project specific #
+####################
+node_modules
+
+# Build specific   #
+####################
+client/public/*.css
+client/public/*.js
+client/public/*.gif
+
+# Test specific   #
+####################
+client/tests/functional/reports
+client/tests/functional/screenshots
+
 # Compiled source #
 ###################
 *.com
@@ -37,16 +52,6 @@
 ehthumbs.db
 Thumbs.db
 web.config
-
-# Project specific #
-####################
-node_modules
-
-# Build specific   #
-####################
-client/public/*.css
-client/public/*.js
-client/public/*.gif
 
 # IIS #
 ####################

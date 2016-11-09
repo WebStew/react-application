@@ -1,7 +1,9 @@
 
+var environment = require ( '../environment' );
+
 module.exports = {
 	historyApiFallback 	: true ,
 	hot 				: true ,
 	inline 				: true ,
-	port 				: 3000
+	port 				: environment.port
 };
