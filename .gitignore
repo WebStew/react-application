@@ -9,8 +9,9 @@ client/public/*.css
 client/public/*.js
 client/public/*.gif
 
-# Test specific   #
-####################
+# Documentation specific   #
+###########################
+client/documentation
 client/tests/functional/reports
 client/tests/functional/screenshots
 

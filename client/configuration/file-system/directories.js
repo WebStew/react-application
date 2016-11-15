@@ -1,5 +1,5 @@
 
-const path = require ( 'path' );
+var path = require ( 'path' );
 
 module.exports 		= {
 	application 	: path.resolve ( __dirname , '../../development' 	) ,

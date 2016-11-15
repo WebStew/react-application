@@ -1,0 +1,31 @@
+{
+	"tags" : {
+		"allowUnknownTags" : false
+	} ,
+	"source" : {
+		"include" 			: "tests/functional" 	,
+		"includePattern" 	: ".js$" 				,
+		"excludePattern" 	: "(node_modules/|documentation)"
+	} ,
+	"plugins" : [
+		"plugins/markdown" ,
+		"jsdoc-jsx"
+	] ,
+	"jsx" : {
+		"extensions" : [
+			"js" , 
+			"jsx"
+		]
+	} ,
+	"opts" : {
+		"template" 		: "node_modules/docdash/" 					,
+		"encoding" 		: "utf8" 									,
+		"destination" 	: "documentation/javascripts/functional" 	,
+		"recurse" 		: true 										,
+		"verbose" 		: true
+	} ,
+	"templates" : {
+	"cleverLinks" 		: false,
+	"monospaceLinks" 	: false
+	}
+}

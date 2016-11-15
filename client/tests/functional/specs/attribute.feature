@@ -4,7 +4,7 @@ Feature: Test the attributes of a given element
 	I want to be able to test the attributes of a given element
 
 	Background:
-		Given I open the site "/"
+		Given I open the "url" "/"
 
 	Scenario: 	The attribute "id" of a element should be "view-application"
-		Then 	I expect that the attribute "id" from element "#view-application" is "view-application"
+		Then 	the attribute "id" from element "#view-application" is "view-application"

@@ -1,7 +1,8 @@
 
 /**
- * Parse the tags from the CLI to pass to Cucumber
- * @return {Array} The tags to process
+ * @module 		configuration/tags
+ * @description Parse the tags from the CLI to pass to Cucumber
+ * @return 		{Array} The tags to process
  */
 module.exports = (() => {
 
@@ -9,8 +10,8 @@ module.exports = (() => {
 	'use strict'; 
 
 	/**
-	 * The tags to pass to the cucumber options
-	 * @type {Array}
+	 * @description The tags to pass to the cucumber options
+	 * @type 		{Array}
 	 */
 	// Always ignore @Pending tags
 	let tags = [ '~@Pending' ]; 
@@ -20,8 +21,8 @@ module.exports = (() => {
 		if  (value.indexOf ( '--tags=' ) === 0 ) {
 
 			/**
-			 * The collected tags from the CLI param
-			 * @type {String}
+			 * @description The collected tags from the CLI param
+			 * @type 		{String}
 			 */
 			const collected = value.replace ( '--tags=' , '' 	);
 			tags 			= tags.concat 	( collected 		);
