@@ -1,6 +1,6 @@
 
 /**
- * @module 		utilities/move
+ * @module 		actions/move
  * @description Move to the given element with an optional offset on a X and Y position
  * @param 		{String} 	element 	Element selector
  * @param 		{String} 	obsolete 	If we need to add an offset this is set

@@ -1,6 +1,6 @@
 
 /**
- * @module 		events/click
+ * @module 		actions/click
  * @description Perform an click action on the given element
  * @param 		{String} 	action 	The action to perform (click or double click)
  * @param 		{String} 	type 	Type of the element (link or selector)

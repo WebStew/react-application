@@ -1,6 +1,6 @@
 
 /**
- * @module 		utilities/wait
+ * @module 		actions/wait
  * @description Wait for the given element to be checked, enabled, selected, visible, contain
  * 				a text, contain a value or to exist
  * @param 		{String} 	element 	Element selector

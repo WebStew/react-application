@@ -1,6 +1,6 @@
 
 /**
- * @module 		utilities/wait-for-visible
+ * @module 		actions/wait-for-visible
  * @description Wait for the given element to become visible
  * @param 		{String} 	element Element selector
  * @param 		{String} 	not 	Whether or not to expect a visible or hidden state
