@@ -6,7 +6,7 @@ const port 			= process.env.PORT || 3000;
 const application 	= express ();
 
 // Serve static assets normally
-application.use ( express.static ( __dirname + '/public' ));
+application.use ( express.static ( __dirname + '/public' 		));
 
 application.get ( '/styleguide' , function ( request , response ) {
 

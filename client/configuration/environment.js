@@ -1,8 +1,9 @@
 	
 var environment 	= process.env.ENVIROMENT || 'development',
 	environments 	= {
+		environment : environment 		, 
 		development : {
-			host : 'http://localhost' ,
+			host : 'http://localhost' 	,
 			port : 3000
 		}
 	};
