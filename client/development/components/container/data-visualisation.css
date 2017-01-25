@@ -8,7 +8,7 @@
 }
 
 .data-visualisation--loading {
-	background-image 	: url( '/images/presentation/loader-small.gif' );
+	background-image 	: url( '../../images/presentation/loader-small.gif' );
 	background-repeat 	: no-repeat;
 	background-position : center center;
 }
