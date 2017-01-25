@@ -2,13 +2,13 @@
 var directories = require ( '../file-system/directories' );
 
 module.exports 	= {
-	root 		: [
-		directories.application
+	modules 	: [
+		directories.application ,
+		'node_modules'
 	] ,
 	extensions 	: [
-		'' 		,
 		'.css' 	,
 		'.js' 	,
-		'.jsx' 
+		'.jsx'
 	]
 };

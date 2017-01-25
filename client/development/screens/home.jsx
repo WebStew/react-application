@@ -1,8 +1,9 @@
 
 import React , 	{ Component } 	from 'react';
 import 			{ render 	} 	from 'react-dom';
-import Timer 					from 'components/container/timer';
-import LapTimes 				from 'components/container/lap-times';
+//import Timer 					from 'components/container/timer';
+//import LapTimes 				from 'components/container/lap-times';
+import DataVisualisation 		from 'components/container/data-visualisation.jsx'
 
 /**
  * React home page controller view.
@@ -17,11 +18,7 @@ class Home extends Component {
 
 		return (
 			<section>
-				<h1>Home page</h1>
-				<p>Including the stopwatch component</p>
-
-				<Timer interval='10' 	/>
-				<LapTimes 				/>
+				<DataVisualisation />
 			</section>
 		);
 	}

@@ -33,15 +33,18 @@ module.exports 		= {
 	devServer 		: servers.development 		,
 
 	resolve			: configuration.resolver 	,
+
 	module			: {
-		loaders 	: [
-			loaders.css 	,
-			loaders.file 	,
-			loaders.jsx
+
+		rules : [
+			loaders.jsx ,
+			loaders.css ,
+			loaders.file
 		]
 	} ,
-	postcss			: plugins.postcss , 
+
 	plugins 		: [
+		plugins.postcss 	,
 		plugins.extractor
 	]
 };

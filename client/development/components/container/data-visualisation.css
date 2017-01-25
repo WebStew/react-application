@@ -1,0 +1,14 @@
+
+.data-visualisation {
+	border-radius 	: 0;
+	height 			: 100%;
+	left 			: 0;
+	position 		: fixed;
+	top 			: 0;
+}
+
+.data-visualisation--loading {
+	background-image 	: url( '/images/presentation/loader-small.gif' );
+	background-repeat 	: no-repeat;
+	background-position : center center;
+}

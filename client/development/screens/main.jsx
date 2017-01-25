@@ -14,7 +14,7 @@ class Main extends Component {
 
 		return (
 			<div>
-				<NavigationPrimary />
+				{/*<NavigationPrimary />*/}
 				<main
 					className 	= 'container'
 					role 		= 'main'>

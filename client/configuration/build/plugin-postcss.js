@@ -1,13 +1,14 @@
 
-module.exports = function ( webpack ) {
+var webpack 	= require ( 'webpack' );
 
-	return [
-		require ( 'postcss-import' 				) ({ 
-			addDependencyTo : webpack 
-		}) 												,
-		require ( 'postcss-url' 				) ()	,
-		require ( 'postcss-cssnext'				) 		,
-		require ( 'postcss-browser-reporter' 	) () 	,
-		require ( 'postcss-reporter' 			) ()
-	];
-};
+module.exports 	= new webpack.LoaderOptionsPlugin({
+	options 	: {
+		postcss : [
+			require ( 'postcss-import' 				) () ,
+			require ( 'postcss-url' 				) () ,
+			require ( 'postcss-cssnext'				) ,
+			require ( 'postcss-browser-reporter' 	) () ,
+			require ( 'postcss-reporter' 			) ()
+		]
+	}
+});

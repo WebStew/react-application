@@ -1,6 +1,6 @@
 
-@import 'basic/reset';
-@import 'basic/base';
+@import 'foundation/reset';
+@import 'foundation/base';
 @import 'controls/buttons';
 @import 'controls/embed';
 @import 'controls/forms';

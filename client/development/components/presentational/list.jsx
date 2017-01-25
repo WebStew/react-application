@@ -3,7 +3,6 @@ import React , 	{ Component } 	from 	'react';
 import 			{ render } 		from 	'react-dom';
 import ListItem 				from 	'components/presentational/list-item';
 import Transition 				from 	'react-addons-css-transition-group';
-import 									'stylesheets/transitions/opacity';
 
 /**
  * React component that will display a single timestamp from the timestamp store.
