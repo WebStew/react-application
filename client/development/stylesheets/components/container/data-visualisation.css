@@ -1,0 +1,21 @@
+
+@import '../../configuration/variables';
+
+.data-visualisation {
+	
+	background 		: color( var( --color-body ) lightness( 95% ));
+	border 			: 1px solid color( var( --color-body ) lightness( 75% ));
+	box-shadow 		: 0 0 3px color( var( --color-body ) lightness( 75% )) inset;
+
+	height 			: 100%;
+	left 			: 0;
+	position 		: fixed;
+	top 			: 0;
+	width 			: 100%;
+}
+
+.data-visualisation--loading {
+	background-image 	: url( '~images/presentation/loader-small.gif' );
+	background-repeat 	: no-repeat;
+	background-position : center center;
+}

@@ -1,6 +1,6 @@
 
 /**
- * Constannts across the snAPI boards endpoint
+ * Constants across the snAPI boards endpoint
  * @type {Object}
  */
 export default {

@@ -5,8 +5,11 @@ import { 	createStore 	,
 import 		reducers 			from 'reducers/index';
 import 		thunk 				from 'redux-thunk';
 import 		logger 				from 'redux-logger';
-import * as actionReddit 		from 'actions/reddit';
-import * as actionTimer 		from 'actions/timer';
+
+import * as actionBoards 		from 'actions/boards';
+import * as actionBrowser 		from 'actions/browser';
+
+import 		browser 			from 'utilities/browser';
 
 export let isMonitorAction;
 
@@ -16,18 +19,22 @@ export default function ( state ) {
 		reducers 	,
 		state 		,
 		compose (
-		applyMiddleware (
-			thunk 	,
-			logger ()
-		) ,
-		window.devToolsExtension ? window.devToolsExtension ({
-			getMonitor : ( monitor ) => {
-				isMonitorAction = monitor.isMonitorAction;
-			} ,
-			actionTimer ,
-			actionReddit
-		}) : f => f
-	));
+			applyMiddleware (
+				thunk 	,
+				logger ()
+			) ,
+			window.devToolsExtension ? window.devToolsExtension ({
+				getMonitor : ( monitor ) => {
+					isMonitorAction = monitor.isMonitorAction;
+				} 				,
+				actionBoards 	,
+				actionBrowser
+			}) : f => f
+		)
+	);
+
+	// Bind any events that are stored in state
+	browser.on ( store );
 
 	return store;
 };

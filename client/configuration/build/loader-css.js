@@ -10,7 +10,7 @@ module.exports 	= {
 		loader 			: [
 			{ 
 				loader : 'css-loader' ,
-				query 	: { 
+				query 	: {
 					// modules 	: true , 
 					minimize 	: environment.optimise ,
 					sourceMaps 	: environment.debug
