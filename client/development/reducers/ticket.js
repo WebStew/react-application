@@ -1,10 +1,10 @@
 
-import constants from 'constants/boards';
+import constants from 'constants/ticket';
 
  export default function ( state = {
  		date 	: Date.now () 	,
  		loading : false 		,
- 		models 	: []
+		model 	: {}
  	} , action ) {
 
 	switch ( action.type ) {
@@ -27,7 +27,7 @@ import constants from 'constants/boards';
 				state 	,
 				{
 					loading : false 		,
-					models 	: action.boards
+					model 	: action.ticket
 				}
 			);
 		break;

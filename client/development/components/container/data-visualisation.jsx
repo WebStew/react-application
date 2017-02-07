@@ -2,16 +2,18 @@
 import React , 	{ Component } 	from 'react';
 import 			{ render 	} 	from 'react-dom';
 import 			{ connect 	} 	from 'react-redux';
-import * as d3 					from 'd3';
 import actions					from 'actions/boards';
+import ForceGraph 				from 'components/presentational/force-graph';
 import 							'stylesheets/components/container/data-visualisation';
 
-class DataVisualisation extends Component {
+export default connect (
 
-	constructor () {
+	state => ({
+		boards 		: state.boards ,
+		dimensions 	: state.browser.dimensions
+	})
 
-		super ();
-	}
+) ( class DataVisualisation extends Component {
 	
 	componentDidMount () {
 
@@ -20,43 +22,17 @@ class DataVisualisation extends Component {
 		dispatch ( actions.get ());
 	}
 
-	componentDidUpdate () {
-		
-		console.log ( this)
-		
-		d3.select ( 'svg' ).append("g")
-			.attr("class", "nodes")
-			.selectAll("circle")
-			.data(this.props.boards)
-			.enter().append("circle")
-			.attr("r", 5)
-			.attr("fill", 'red')
-			// .call(d3.drag()
-			// .on("start", dragstarted)
-			// .on("drag", dragged)
-			// .on("end", dragended));
-	}
-
 	render () {
 
-		//let timestamps 	= this.props.timer.timestamps;
+		let dimensions = this.props.dimensions;
 
 		return (
-			<svg 
+			<ForceGraph
 				className 	= { 'data-visualisation' + ( this.props.boards.loading ? ' data-visualisation--loading' : '' )}
-				height 		= { window.innerHeight 	}
-				ref 		= 'canvas'
-				width 		= { window.innerWidth 	}
-			>
-			</svg>
+				height 		= { dimensions.height 			}
+				nodes 		= { this.props.boards.models 	}
+				width 		= { dimensions.width 			}
+			/>
 		);
 	}
-};
-
-export default connect (
-
-	state => ({
-		boards : state.boards
-	})
-
-) ( DataVisualisation );
+});

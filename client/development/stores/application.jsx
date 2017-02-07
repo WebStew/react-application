@@ -6,30 +6,20 @@ import 		reducers 			from 'reducers/index';
 import 		thunk 				from 'redux-thunk';
 import 		logger 				from 'redux-logger';
 
-import * as actionBoards 		from 'actions/boards';
-import * as actionBrowser 		from 'actions/browser';
-
 import 		browser 			from 'utilities/browser';
 
-export let isMonitorAction;
-
 export default function ( state ) {
+
+	let enhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
 	const store = createStore (
 		reducers 	,
 		state 		,
-		compose (
+		enhancers (
 			applyMiddleware (
 				thunk 	,
 				logger ()
-			) ,
-			window.devToolsExtension ? window.devToolsExtension ({
-				getMonitor : ( monitor ) => {
-					isMonitorAction = monitor.isMonitorAction;
-				} 				,
-				actionBoards 	,
-				actionBrowser
-			}) : f => f
+			)
 		)
 	);
 

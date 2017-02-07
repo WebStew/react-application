@@ -3,7 +3,7 @@ import React , 	{ Component } 	from 'react';
 import 			{ render 	} 	from 'react-dom';
 //import Timer 					from 'components/container/timer';
 //import LapTimes 				from 'components/container/lap-times';
-import DataVisualisation 		from 'components/container/data-visualisation.jsx'
+//import DataVisualisation 		from 'components/container/data-visualisation.jsx'
 
 /**
  * React home page controller view.
@@ -18,7 +18,7 @@ class Home extends Component {
 
 		return (
 			<section>
-				<DataVisualisation />
+				{/*<DataVisualisation />*/}
 			</section>
 		);
 	}

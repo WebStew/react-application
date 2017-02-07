@@ -1,14 +1,16 @@
 
-import { combineReducers 	} from 'redux';
-import { routerReducer 		} from 'react-router-redux'
+import { combineReducers 	} 	from 'redux';
+import { routerReducer 		} 	from 'react-router-redux'
 
-//import timer 				from 'reducers/timer';
-//import reddit 				from 'reducers/reddit';
-import boards 				from 'reducers/boards';
-import browser 				from 'reducers/browser';
+import board 					from 'reducers/board';
+import boards 					from 'reducers/boards';
+import browser 					from 'reducers/browser';
+import ticket 					from 'reducers/ticket';
 
 export default combineReducers ({
-	browser ,
+	board 	,
 	boards 	,
+	browser ,
+	ticket 	,
 	routing : routerReducer
 });

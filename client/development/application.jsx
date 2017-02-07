@@ -11,10 +11,11 @@ import 			{
 				} 				from 	'react-router';
 import { syncHistoryWithStore } from 	'react-router-redux'
 import MainView 				from 	'screens/main';
-import HomeView 				from 	'screens/home';
-// import SectionView 				from 	'screens/section';
-// import SubSectionView 			from 	'screens/sub-section';
+import HomeScreen 				from 	'screens/home';
+import BoardsScreen 			from 	'screens/boards';
+import BoardsDetailScreen 		from 	'screens/boards-detail';
 import setStore 				from 	'stores/application';
+import setPageTitle 			from 	'components/presentational/page-title';
 import 									'stylesheets/application';
 
 const store 	= setStore ();
@@ -23,23 +24,25 @@ const history 	= syncHistoryWithStore ( browserHistory , store );
 render (
 
 	<Provider 	store 	= { store }>
-		<Router history = { history }>
+		<Router history = { history } onUpdate = { setPageTitle }>
 			<Route
 				path 		= '/'
-				component 	= { MainView }>
-
+				component 	= { MainView }
+			>
 				<IndexRoute
-					component 	= { HomeView }
-				/>
-				{/*<Route
-					path 		= '/section'
-					component 	= { SectionView }
+					component 	= { HomeScreen }
+					title 		= 'Home'
 				/>
 				<Route
-					path 		= '/section/:id'
-					component 	= { SubSectionView 	}
-				/>*/}
-
+					path 		= '/boards'
+					component 	= { BoardsScreen }
+					title 		= 'Your Boards'
+				/>
+				<Route
+					path 		= '/boards/:id'
+					component 	= { BoardsDetailScreen }
+					title 		= 'Board Detail'
+				/>
 			</Route>
 		</Router>
 	</Provider> ,

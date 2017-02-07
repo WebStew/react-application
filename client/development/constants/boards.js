@@ -7,7 +7,6 @@ export default {
 
 	error 	: 'boards:error' 	,
 	receive : 'boards:receive' 	,
-	request : 'boards:request' 	,
-	set 	: 'boards:set'
+	request : 'boards:request'	
 
 };

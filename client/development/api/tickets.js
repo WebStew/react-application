@@ -4,7 +4,7 @@ import environment 	from 'configuration/environment';
 
 const api = {
 		domain 		: environment.snapi ,
-		endpoint 	: '/snapi/boards'
+		endpoint 	: '/snapi/tickets'
 	}
 
 export default {

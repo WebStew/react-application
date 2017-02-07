@@ -1,5 +1,5 @@
 
-import constants 	from 'constants/boards';
+import constants 	from 'constants/board';
 import api 			from 'api/boards';
 
 const error = function () {
@@ -12,7 +12,7 @@ const error = function () {
 	receive = function ( data ) {
 
 		return {
-			boards 	: data 				,
+			board 	: data 				,
 			type 	: constants.receive
 		};
 	} ,
@@ -31,18 +31,18 @@ const error = function () {
  */
 export default {
 
-	get () {
+	get ( id ) {
 
 		return function ( dispatch ) {
 
 			dispatch ( request ());
 
-			return api.get ().then ( function ( response ) {
+			return api.get ( id ).then ( function ( response ) {
 
 				return response.data;
 			})
-			.then 	( boards 	=> dispatch ( receive 	( boards 	)))
-			.catch 	( data 		=> dispatch ( error 	( data 		)));
+			.then 	( data => dispatch ( receive 	( data )))
+			.catch 	( data => dispatch ( error 		( data 	)));
 		}
 	}
 };

@@ -14,38 +14,24 @@ class NavigationPrimary extends Component {
 
 		return (
 			<nav
-				className 		= 'navbar navbar-default'
 				role 			= 'navigation'
-				aria-labelledby = 'Primary site navigation'>
-				<div className 	= 'container-fluid'>
-					<div className 		= 'navbar-header'>
+				aria-labelledby = 'Main Navigation'>
+				<ul>
+					<li>
 						<Link
-							className 	= 'navbar-brand'
-							to 			= '/'>
-							Logo image
+							activeClassName = 'navigation__link--active'
+							to 				= '/'>
+							Home
 						</Link>
-					</div>
-					<div
-						className 	= 'collapse navbar-collapse'
-						id 			= 'bs-example-navbar-collapse-1'>
-						<ul className 	= 'nav navbar-nav'>
-                            <li>
-                            	<Link
-                            		activeClassName = 'active'
-                            		to 				= '/'>
-                            		Home
-                            	</Link>
-                            </li>
-                            <li>
-                            	<Link
-                            		activeClassName = 'active'
-                            		to 				= '/section'>
-                            		Section
-                            	</Link>
-                            </li>
-						</ul>
-					</div>
-				</div>
+					</li>
+					<li>
+						<Link
+							activeClassName = 'navigation__link--active'
+							to 				= '/boards'>
+							Boards
+						</Link>
+					</li>
+				</ul>
 			</nav>
 		);
 	}
